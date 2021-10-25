@@ -1,0 +1,18 @@
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .modal-overlay {
+    z-index: 3;
+  }
+
+  footer {
+    z-index: 0;
+  }
+}

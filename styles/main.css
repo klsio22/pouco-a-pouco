@@ -1,0 +1,129 @@
+/* ========== Global ======= */
+:root {
+  --color-body-primary: #e5e5e5;
+  --color-primary: #fff;
+  --dark-blue: #363f5f;
+  --dark-green: #49aa26;
+  --light-green: #3dd705;
+  --red: #e92929;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75%; /*15px*/
+}
+
+body {
+  background-color: var(--color-body-primary);
+  font-family: "Poppins", sans-serif;
+}
+/* ========== Top ======= */
+
+header {
+  text-align: center;
+  padding: 2rem 0 12rem;
+  font-size: 1.5rem;
+  background-color: #2d4a22;
+}
+/* ========== Main ======= */
+
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-green);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--light-green);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  color: var(--color-primary);
+  background: var(--dark-green);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--light-green);
+}
+
+main {
+  width: min(90vw, 800px);
+  margin: auto;
+
+  padding: 1.5rem 0;
+}
+
+input {
+  border: none;
+  border-radius: 0.2rem;
+
+  padding: 0.8rem;
+
+  width: 100%;
+}
+
+/* ========== Table ======= */
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+  border-radius: 0 0.25rem 0.25rem 0rem;
+}
+
+table thead th {
+  background: var(--color-primary);
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+table tbody tr {
+  opacity: 0.7;
+}
+
+table tbody tr:hover {
+  opacity: 1;
+}
+
+table tbody td {
+  background: var(--color-primary);
+  padding: 1rem 2rem;
+}
+
+td.description {
+  color: var(--dark-blue);
+}
+
+td.income {
+  color: #12a454;
+}
+
+td.expense {
+  color: var(--red);
+}
+
+/* ========== Footer ======= */
+
+footer {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  color: var(--dark-blue);
+  opacity: 0.6;
+}
