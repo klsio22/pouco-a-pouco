@@ -33,7 +33,7 @@ Site ótimo para organizar as suas finanças pessoais
 
 - [ ] Função com nome
 
-- [ ] Função aninhada/local - declarar uma função dentro de outra
+- [x] Função aninhada/local - declarar uma função dentro de outra
 
 - [x] Passagem de uma função como parâmetro
 
@@ -79,7 +79,7 @@ Site ótimo para organizar as suas finanças pessoais
 
 ## Objetos Nativos
 
-- [ ] Usar pelo menos 3 métodos de manipulação de array
+- [x] Usar pelo menos 3 métodos de manipulação de array
 
 - [x] Usar laço de repetição (for..in ou for..of ou forEach)
 
