@@ -74,13 +74,6 @@ const Transaction = {
     App.reload();
   },
 
-  //Editar indice
-  edit(index) {
-    this.remove()
-    Transaction.all.add(index)
-
-  },
-
   incomes() {
     let income = 0;
     Transaction.all.forEach((transactions) => {
@@ -130,13 +123,14 @@ const DOM = {
           <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
         </td>
         <td>
-          <img onclick="Form.editFilds()" src="./assets/edit.png" alt="Editar Transação">
+          <img onclick="" src="./assets/edit.png" alt="Editar Transação">
         </td>
         
       `;
 
     return html;
   },
+
   //Executa e formata as operações da balança dos valores
   updateBalencer() {
     document
@@ -241,17 +235,9 @@ const Form = {
 
   },
 
-  editFilds() {
-    Modal.openAndClose();
-    //verificar se is campos estão validos
-    //Formartar os dados para salvar
-    const transaction = Form.formatValues();
-    //salvar
+  editFilds(transaction,index) {
     Modal.salveAndClose();
-    Transaction.edit(transaction)
-    //modal fecha
-    //console.log(Modal.salveAndClose())
-    //Atualizar aplicação
+    Transaction.edit(transaction,index)
   },
 
   clearFields() {
@@ -272,7 +258,7 @@ const Form = {
       Transaction.add(transaction)
       //apagar os dados do fomulario
       Form.clearFields();
-      //modal fecha
+      //modal fecha e salvar
       Modal.salveAndClose();
       //console.log(Modal.salveAndClose())
       //Atualizar aplicação
