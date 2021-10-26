@@ -24,12 +24,12 @@ const Storage = {
   /* JSON.parse converte a String para um objeto ou um array
   caso não exista ela retonarar um array vazil  */
   get() {
-    return JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
+    return JSON.parse(localStorage.getItem("pouco.a.pouco:transactions")) || [];
   },
   //Sempre o local storage guarda uma String 
   //dev.fanances:transactions chave do localStorage
   set(transaction) {
-    localStorage.setItem("dev.finances:transactions", JSON.stringify(transaction))
+    localStorage.setItem("pouco.a.pouco:transactions", JSON.stringify(transaction))
   }
 }
 

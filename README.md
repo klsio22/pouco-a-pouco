@@ -27,7 +27,7 @@ Site ótimo para organizar as suas finanças pessoais
 
 - [ ] Função anônima sem argumento
 
-- [ ] Função anônima com retorno
+- [x] Função anônima com retorno
 
 - [ ] Função auto-executável
 
@@ -35,9 +35,9 @@ Site ótimo para organizar as suas finanças pessoais
 
 - [ ] Função aninhada/local - declarar uma função dentro de outra
 
-- [ ] Passagem de uma função como parâmetro
+- [x] Passagem de uma função como parâmetro
 
-- [ ] Função Flecha - Arrow Function
+- [x] Função Flecha - Arrow Function
 
 ## Eventos
 
@@ -55,11 +55,11 @@ Site ótimo para organizar as suas finanças pessoais
 
   
 
-- [ ] Acesso aos elementos DOM do HTML
+- [x] Acesso aos elementos DOM do HTML
 
 - [ ] Via referência DOM pelo id do elemento HTML
 
-- [ ] Via getElementByID()
+- [x] Via getElementByID()
 
 - [ ] Via getElementsByName()
 
@@ -81,7 +81,7 @@ Site ótimo para organizar as suas finanças pessoais
 
 - [ ] Usar pelo menos 3 métodos de manipulação de array
 
-- [ ] Usar laço de repetição (for..in ou for..of ou forEach)
+- [x] Usar laço de repetição (for..in ou for..of ou forEach)
 
 - [ ] Usar pelo menos 3 métodos para manipulação de string
 
@@ -113,9 +113,9 @@ Site ótimo para organizar as suas finanças pessoais
 
 ## Formulário
 
-- [ ] Validação de formulário com onsubmit usando os métodos tradicionais
+- [x] Validação de formulário com onsubmit usando os métodos tradicionais
 
-- [ ] Validação de formulário com HTML5 API
+- [x] Validação de formulário com HTML5 API
 
   Customizar as mensagens nos balões de mensagem
 
@@ -151,7 +151,7 @@ Site ótimo para organizar as suas finanças pessoais
 
 ## Web Storage
 
-- [ ] LocalStorage ou SessionStorage
+- [x] LocalStorage ou SessionStorage
 
 - [ ] Leitura e escrita de dados simples
 
