@@ -8,16 +8,16 @@
 
   <link rel="icon" href="./assets/icon-logo.png">
   <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/main.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
-     rel="stylesheet">
+    rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-  
+  <link rel="stylesheet" href="./styles/main.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
@@ -32,30 +32,36 @@
   <header>
 
     <nav>
-      <div class="nav-wrapper light-green accent-3">
+      <div class="nav-wrapper lime accent-3 ">
         <a href="#!" class="brand-logo">
           <img id="logo" src="./assets/Logo-and-icon.png" alt="">
         </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"><img
               src="./assets/menu.png" alt=""></i></a>
 
-        <ul class="right hide-on-med-and-down">
+        <ul class="hide-on-med-and-down" id="menu">
           <li><a href="home.html">Início</a></li>
-          <li><a href="badges.html">Sobre</a></li>
-          <li><a href="collapsible.html">Planos</a></li>
-          <li><a href="mobile.html">Recursos</a></li>
-          <li><a href="mobile.html">Contato</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="plans.html">Planos</a></li>
+          <li><a href="resources.html">Recursos</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a class="login" id="login" href="#">Entrar</a></li>
+          <li class="registration" id="registration">
+            <a class="waves-effect waves-light light-blue accent-4
+            btn">Começar Grátis</a>
+          </li>
         </ul>
+      
 
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html">Início</a></li>
-      <li><a href="badges.html">Sobre</a></li>
-      <li><a href="collapsible.html">Planos</a></li>
-      <li><a href="mobile.html">Recursos</a></li>
-      <li><a href="mobile.html">Contato</a></li>
+      <li><a href="home.html">Início</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="plans.html">Planos</a></li>
+      <li><a href="resources.html">Recursos</a></li>
+      <li><a href="contact.html">Contato</a></li>
     </ul>
 
   </header>
@@ -78,7 +84,7 @@
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li class="active"><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
@@ -99,6 +105,11 @@
   <script>
     $(document).ready(function () {
       $('.sidenav').sidenav();
+    });
+
+
+    $(document).ready(function () {
+      $('.tabs').tabs();
     });
 
   </script>

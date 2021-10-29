@@ -2,6 +2,32 @@
   padding: 1rem;
 }
 
+.login{
+  margin-left: 10rem;
+}
+
+nav .sidenav-trigger i{
+  padding: 0.4rem;
+}
+
+nav ul li a {
+  color: #000;
+}
+
+ul{
+  padding: initial;
+}
+
+
+#menu{
+  padding-left: 15rem;
+}
+
+#menu a {
+  border-radius: 10rem;
+}
+
+
 @media (min-width:1000px){
   .nav-wrapper {
     justify-content: center;
