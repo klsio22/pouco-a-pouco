@@ -1,5 +1,5 @@
 # Pouco-a-Pouco
-## O ponto de partida para você controlar o seu dinheiro
+### O ponto de partida para você controlar o seu dinheiro
 
 ### 🚀 - Link do Wareframe: https://www.figma.com/file/Me3UIIa4FdwBvdFWZpGQ5J/Pouco-a-Pouco?node-id=2%3A62
 
