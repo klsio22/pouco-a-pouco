@@ -67,18 +67,10 @@ const Transaction = {
 
     App.reload();
   },
-
   //remover um indice por vez
   remove(index) {
     Transaction.all.splice(index, 1);
     App.reload();
-  },
-
-  //Editar indice
-  edit(index) {
-    this.remove()
-    Transaction.all.add(index)
-
   },
 
   incomes() {
@@ -127,12 +119,11 @@ const DOM = {
         <td class="${CSSclass}">${amount}</td>
         <td class="date">${transaction.date}</td>
         <td>
-          <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover transação">
+          <img onclick="Transaction.remove(${index})" src="../assets/minus.svg" alt="Remover transação">
         </td>
         <td>
-          <img onclick="Form.editFilds()" src="./assets/edit.png" alt="Editar Transação">
+          <img onclick="Transaction.remove(${index})" src="../assets/edit.png" alt="Remover transação">
         </td>
-        
       `;
 
     return html;
@@ -241,19 +232,6 @@ const Form = {
 
   },
 
-  editFilds() {
-    Modal.openAndClose();
-    //verificar se is campos estão validos
-    //Formartar os dados para salvar
-    const transaction = Form.formatValues();
-    //salvar
-    Modal.salveAndClose();
-    Transaction.edit(transaction)
-    //modal fecha
-    //console.log(Modal.salveAndClose())
-    //Atualizar aplicação
-  },
-
   clearFields() {
     Form.description.value = "";
     Form.amount.value = "";
@@ -266,7 +244,7 @@ const Form = {
     try {
       //verificar se is campos estão validos
       Form.validateFields();
-      //Formartar os dados para salvar
+      //Formar os dados para salvar
       const transaction = Form.formatValues();
       //salvar
       Transaction.add(transaction)
