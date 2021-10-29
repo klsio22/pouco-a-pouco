@@ -1,34 +1,45 @@
-#logo{
+body{
+  min-width:327px;
+}
+
+#logo {
   padding: 1rem;
 }
 
-.login{
-  margin-left: 10rem;
+#login {
+  color: #2962ff;
 }
 
-nav .sidenav-trigger i{
-  padding: 0.4rem;
+nav .sidenav-trigger i {
+  padding: 0.4rem 0;
+ 
 }
 
 nav ul li a {
   color: #000;
 }
 
-ul{
+ul {
   padding: initial;
 }
 
+#mobile-demo {
+  margin-top: 3.5rem;
+}
 
-#menu{
+#menu {
   padding-left: 15rem;
 }
 
-#menu a {
+#registration a {
   border-radius: 10rem;
 }
 
+@media (min-width: 1000px) {
+  .login {
+    margin-left: 10rem;
+  }
 
-@media (min-width:1000px){
   .nav-wrapper {
     justify-content: center;
     display: grid;
