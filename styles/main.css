@@ -1,0 +1,10 @@
+#logo{
+  padding: 1rem;
+}
+
+@media (min-width:1000px){
+  .nav-wrapper {
+    justify-content: center;
+    display: grid;
+  }
+}
