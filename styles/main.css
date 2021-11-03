@@ -26,12 +26,11 @@ nav ul li a {
 header .container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 header nav .container #menu {
-  padding-left: 25rem;
+  padding-left: 20rem;
 }
 
 header nav .bottom #registration {
@@ -41,13 +40,25 @@ header nav .bottom #registration {
 
 header nav .bottom {
   padding: 1rem;
+  margin-left: 5rem;
 }
 
 main {
   padding: 0.5rem;
 }
 
-#page-footer{
+#page-footer {
   background-color: #e2ffd8;
 }
 
+.page-footer h6 {
+  margin-bottom: 1rem;
+}
+
+.page-footer .images img {
+  margin-right: 1rem;
+}
+
+.page-footer .images img:last-child {
+  margin-right: 0rem;
+}

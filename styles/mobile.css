@@ -13,8 +13,11 @@
   
 }
 
-@media (max-width: 1020px) {
-
+@media (max-width: 1024px) {
+  header .container {
+    justify-content:space-between;
+  }
+  
   .logo{
     display: none;
   }
