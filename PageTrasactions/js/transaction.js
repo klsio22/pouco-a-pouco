@@ -5,17 +5,17 @@ const Modal = {
     // Abrir modal
     // Adicionar a class active ao modal
     document.querySelector('.cancel').onclick = () => {
-      Modal.modal.classList.toggle('active');
+      Modal.modal.classList.toggle('active-modal');
     }
 
     document.querySelector('.new').onclick = () => {
-      Modal.modal.classList.toggle('active');
+      Modal.modal.classList.toggle('active-modal');
     }
 
   },
 
   salveAndClose() {
-    Modal.modal.classList.toggle('active')
+    Modal.modal.classList.toggle('active-modal')
   },
 
 };

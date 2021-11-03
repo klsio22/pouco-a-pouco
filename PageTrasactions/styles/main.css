@@ -121,9 +121,27 @@ td.expense {
 
 /* ========== Footer ======= */
 
-footer {
+/* footer {
   text-align: center;
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0.6;
+}
+ */
+
+
+ #page-footer {
+  background-color: #e2ffd8;
+}
+
+.page-footer h6 {
+  margin-bottom: 1rem;
+}
+
+.page-footer .images img {
+  margin-right: 1rem;
+}
+
+.page-footer .images img:last-child {
+  margin-right: 0rem;
 }

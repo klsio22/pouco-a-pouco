@@ -103,12 +103,12 @@
   visibility: hidden;
 }
 
-.modal-overlay.active {
+.modal-overlay.active-modal {
   opacity: 1;
   visibility: visible;
 }
 
-.modal {
+.modal-1{
   background: #f0f2f5;
   padding: 2.4rem;
   position: relative;
