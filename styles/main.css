@@ -2,12 +2,17 @@ body{
   min-width:327px;
 }
 
-#logo {
-  padding: 1rem;
+.logo {
+  padding: 1.5rem;
 }
 
 #login {
   color: #2962ff;
+}
+
+header nav{
+  background-color: #E2FFD8;
+
 }
 
 nav .sidenav-trigger i {
@@ -19,29 +24,71 @@ nav ul li a {
   color: #000;
 }
 
+header .container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 ul {
   padding: initial;
 }
 
 #mobile-demo {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
 }
+
+#mobile-demo li a {
+  border-bottom: solid 1px rgb(29, 29, 29,0.15);
+}
+
 
 #menu {
-  padding-left: 15rem;
+  padding-left: 25rem;
 }
 
-#registration a {
+#registration{
+  margin-left: 1rem;
   border-radius: 10rem;
 }
 
-@media (min-width: 1000px) {
-  .login {
-    margin-left: 10rem;
-  }
 
+.bottom{
+  padding: 1rem;
+}
+
+/* ---------------------------------------------- */
+@media (min-width: 1024px) {
+  .logo-mobile{
+    display: none;
+  }
+  
   .nav-wrapper {
     justify-content: center;
     display: grid;
+  }
+
+}
+
+@media only screen and (max-width: 992px){
+  nav #brand-logo{
+    left: 6.5rem;
+  }
+  
+}
+
+@media (max-width: 1020px) {
+
+  nav .brand-logo{
+    left: 6rem;
+  }
+
+  .logo{
+    display: none;
+  }
+  
+  .login {
+    display: none
   }
 }

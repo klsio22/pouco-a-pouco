@@ -1,121 +1,146 @@
 <!DOCTYPE html>
 <html lang="pr-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./styles/reset.css" />
 
-  <link rel="icon" href="./assets/icon-logo.png">
-  <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
-    rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles/main.css" />
 
-  <link rel="stylesheet" href="./styles/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+    <title>Pouco a Pouco</title>
+  </head>
 
-  <title>Pouco a Pouco</title>
+  <body>
+    <header>
+      <nav class="">
+        <div class="nav-wrapper container">
+          <div class="nav-menu">
+            <a href="#!" id="brand-logo" class="brand-logo">
+              <img
+                class="logo"
+                id="logo"
+                src="./assets/Logo-and-icon.png"
+                alt=""
+              />
+              <img
+                class="logo-mobile"
+                id="logo-mobile"
+                src="./assets/icon-logo.png"
+                alt=""
+              />
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons">
+                <img src="./assets/menu.png" alt="" />
+              </i>
+            </a>
 
+            <ul class="hide-on-med-and-down" id="menu">
+              <li><a href="home.html">Início</a></li>
+              <li><a href="about.html">Sobre</a></li>
+              <li><a href="plans.html">Planos</a></li>
+              <li><a href="resources.html">Recursos</a></li>
+              <li><a href="contact.html">Contato</a></li>
 
-</head>
+              <div>
+                <li></li>
+                <li class="registration"></li>
+              </div>
+            </ul>
+          </div>
 
-<body>
-
-  <header>
-
-    <nav>
-      <div class="nav-wrapper lime accent-3 ">
-        <a href="#!" class="brand-logo">
-          <img id="logo" src="./assets/Logo-and-icon.png" alt="">
-        </a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"><img
-              src="./assets/menu.png" alt=""></i></a>
-
-        <ul class="hide-on-med-and-down" id="menu">
-          <li><a href="home.html">Início</a></li>
-          <li><a href="about.html">Sobre</a></li>
-          <li><a href="plans.html">Planos</a></li>
-          <li><a href="resources.html">Recursos</a></li>
-          <li><a href="contact.html">Contato</a></li>
-          <li><a class="login" id="login" href="PageTrasactions/index.html">Entrar</a></li>
-          <li class="registration" id="registration">
-            <a class="waves-effect waves-light light-blue accent-4
-            btn">Começar Grátis</a>
-          </li>
-        </ul>
-
-
-      </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="home.html">Início</a></li>
-      <li><a href="about.html">Sobre</a></li>
-      <li><a href="plans.html">Planos</a></li>
-      <li><a href="resources.html">Recursos</a></li>
-      <li><a href="contact.html">Contato</a></li>
-      <hr>
-      <li><a class="login" id="login" href="PageTrasactions/index.html">Entrar</a></li>
-      <li class="registration" id="registration">
-        <a class="waves-effect waves-light light-blue accent-4
-        btn">Começar Grátis</a>
-      </li>
-
-    </ul>
-
-  </header>
-
-
-  <main class="container">
-    <div>Principal</div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ducimus assumenda architecto quos quisquam
-      obcaecati. Illum necessitatibus vero laudantium blanditiis quo porro sunt perferendis quisquam fuga cum ab,
-      praesentium esse?</p>
-  </main>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          <div class="bottom">
+            <a class="login" id="login" href="PageTrasactions/index.html"
+              >Entrar</a
+            >
+            <a
+              href="#"
+              id="registration"
+              class="waves-effect waves-light light-blue accent-4 btn"
+            >
+              Começar Grátis
+            </a>
+          </div>
         </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li class="active"><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="home.html">Início</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="plans.html">Planos</a></li>
+        <li><a href="resources.html">Recursos</a></li>
+        <li><a href="contact.html">Contato</a></li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <div>Principal</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ducimus
+        assumenda architecto quos quisquam obcaecati. Illum necessitatibus vero
+        laudantium blanditiis quo porro sunt perferendis quisquam fuga cum ab,
+        praesentium esse?
+      </p>
+    </main>
+
+    <footer class="page-footer">
       <div class="container">
-        © 2021 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">
+              You can use rows and columns here to organize your footer content.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li class="active">
+                <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+              </li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2021 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $('.sidenav').sidenav();
-    });
-
-
-  </script>
-</body>
-
+    <script>
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
+  </body>
 </html>
