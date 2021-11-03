@@ -1,7 +1,7 @@
 # Pouco-a-Pouco
 ### O ponto de partida para você controlar o seu dinheiro
 
-### 🚀 - Link do Wareframe: https://www.figma.com/file/Me3UIIa4FdwBvdFWZpGQ5J/Pouco-a-Pouco?node-id=2%3A62
+### 🚀 -  Wareframe: [Projeto no Figma](https://www.figma.com/file/Me3UIIa4FdwBvdFWZpGQ5J/Pouco-a-Pouco?node-id=2%3A62)
 
 ### 🚀 - Link do gitpage do site: [Pouco a Pouco](https://klsio22.github.io/pouco-a-pouco/)
 
@@ -57,7 +57,7 @@
 
 - [x] Acesso aos elementos DOM do HTML
 
-- [ ] Via referência DOM pelo id do elemento HTML
+- [x] Via referência DOM pelo id do elemento HTML
 
 - [x] Via getElementByID()
 
