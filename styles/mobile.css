@@ -8,7 +8,7 @@
 
 @media only screen and (max-width: 992px){
   nav #brand-logo{
-    left: 6.5rem;
+    left: 6.0rem;
   }
   
 }
@@ -17,13 +17,16 @@
   header .container {
     justify-content:space-between;
   }
+  .logo-mobile{
+    padding-left: 0.5rem;
+  }
   
   .logo{
     display: none;
   }
   
-  .login {
-    display: none
+  header nav .bottom{
+    margin-left: 2.1rem;
   }
 }
 
