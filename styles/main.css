@@ -1,8 +1,9 @@
-body{
-  min-width:327px;
+body {
+  min-width: 327px;
+  font-size: 14px;
 }
 
-.logo {
+header nav .container .nav-menu .brand-logo .logo {
   padding: 1.5rem;
 }
 
@@ -10,85 +11,43 @@ body{
   color: #2962ff;
 }
 
-header nav{
-  background-color: #E2FFD8;
-
+header nav {
+  background-color: #e2ffd8;
 }
 
-nav .sidenav-trigger i {
+header nav .sidenav-trigger .material-icons {
   padding: 0.4rem 0;
- 
 }
 
 nav ul li a {
   color: #000;
 }
 
-header .container{
+header .container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-ul {
-  padding: initial;
-}
-
-#mobile-demo {
-  margin-top: 4rem;
-}
-
-#mobile-demo li a {
-  border-bottom: solid 1px rgb(29, 29, 29,0.15);
-}
-
-
-#menu {
+header nav .container #menu {
   padding-left: 25rem;
 }
 
-#registration{
+header nav .bottom #registration {
   margin-left: 1rem;
   border-radius: 10rem;
 }
 
-
-.bottom{
+header nav .bottom {
   padding: 1rem;
 }
 
-/* ---------------------------------------------- */
-@media (min-width: 1024px) {
-  .logo-mobile{
-    display: none;
-  }
-  
-  .nav-wrapper {
-    justify-content: center;
-    display: grid;
-  }
-
+main {
+  padding: 0.5rem;
 }
 
-@media only screen and (max-width: 992px){
-  nav #brand-logo{
-    left: 6.5rem;
-  }
-  
+#page-footer{
+  background-color: #e2ffd8;
 }
 
-@media (max-width: 1020px) {
-
-  nav .brand-logo{
-    left: 6rem;
-  }
-
-  .logo{
-    display: none;
-  }
-  
-  .login {
-    display: none
-  }
-}

@@ -1,0 +1,11 @@
+@media (min-width: 1024px) {
+  .logo-mobile{
+    display: none;
+  }
+  
+  .nav-wrapper {
+    justify-content: center;
+    display: grid;
+  }
+
+}

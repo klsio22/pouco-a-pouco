@@ -1,0 +1,26 @@
+#mobile-demo {
+  margin-top: 4rem;
+}
+
+#mobile-demo li a {
+  border-bottom: solid 1px rgb(29, 29, 29,0.15);
+}
+
+@media only screen and (max-width: 992px){
+  nav #brand-logo{
+    left: 6.5rem;
+  }
+  
+}
+
+@media (max-width: 1020px) {
+
+  .logo{
+    display: none;
+  }
+  
+  .login {
+    display: none
+  }
+}
+
