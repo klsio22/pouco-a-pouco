@@ -47,6 +47,14 @@ main {
   padding: 0.5rem;
 }
 
+main .title{
+  font-weight: bold;
+}
+
+main .figure{
+  margin-top: 1rem;
+}
+
 #page-footer {
   background-color: #e2ffd8;
 }
