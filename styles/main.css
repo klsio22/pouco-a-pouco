@@ -33,12 +33,12 @@ header nav .container #menu {
   padding-left: 20rem;
 }
 
-header nav .bottom #registration {
+header nav .bottom-register #registration {
   margin-left: 1rem;
   border-radius: 10rem;
 }
 
-header nav .bottom {
+header nav .bottom-register{
   padding: 1rem;
   margin-left: 5rem;
 }

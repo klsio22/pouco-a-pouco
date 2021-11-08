@@ -1,6 +1,7 @@
 /* ========== Top ======= */
 #logo {
   color: var(--color-primary);
+  width: 50vh;
 }
 
 /* ========== Balencer ======= */
@@ -108,12 +109,27 @@
   visibility: visible;
 }
 
-.modal-1{
+.modal-1 {
   background: #f0f2f5;
   padding: 2.4rem;
   position: relative;
   z-index: 1;
   max-width: 90%;
+}
+
+/* ========== button ======= */
+.back {
+  padding: 1rem;
+}
+
+.back-home {
+  border-radius: 10rem;
+}
+
+#back-home .row {
+  display: flex;
+  align-items: center;
+  width: 7rem;
 }
 
 /* ========== Form ======= */
@@ -132,7 +148,7 @@
 
 .input-group .help {
   opacity: 0.4;
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
 .input-group.actions {

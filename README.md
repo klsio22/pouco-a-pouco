@@ -17,7 +17,7 @@
 
 ## Temporizadores
 
-- [ ] setInterval
+- [x] setInterval
 
 - [ ] setTimeout
 
@@ -41,7 +41,7 @@
 
 ## Eventos
 
-- [ ] Evento de carregamento do documento - onload
+- [x] Evento de carregamento do documento - onload
 
 - [ ] Evento de movimento do mouse
 

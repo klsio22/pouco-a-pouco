@@ -122,7 +122,7 @@ const DOM = {
           <img onclick="Transaction.remove(${index})" src="../assets/minus.svg" alt="Remover transação">
         </td>
         <td>
-          <img onclick="Transaction.remove(${index})" src="../assets/edit.png" alt="Remover transação">
+          <img onclick="" src="../assets/edit.png" alt="Remover transação">
         </td>
       `;
 
