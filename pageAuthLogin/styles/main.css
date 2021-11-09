@@ -1,0 +1,33 @@
+.top{
+  width:100;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.tabs-root{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.tabs-root button{
+  border: none;
+  background-color: white;
+  width: 12rem;
+}
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.touch-ripple-root{
+  margin-top: 1rem;
+  border: 1px solid #2962FF;
+  width: 100%;
+}
