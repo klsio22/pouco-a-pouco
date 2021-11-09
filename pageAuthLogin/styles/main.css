@@ -1,5 +1,9 @@
-.top{
-  width:100;
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.top {
+  width: 100;
   padding: 1rem;
 }
 
@@ -7,13 +11,38 @@ main {
   padding: 1rem;
 }
 
-.tabs-root{
+.btn {
+  margin: 1rem;
+  border-radius: 1.5rem;
+}
+
+p {
+  opacity: 0.7;
+}
+
+/* ========= Motivacional conteiner ========== */
+.motivation h5{
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.motivation p {
+  margin: 1rem;
+}
+
+
+
+
+/* ========= Botões de entrada e cadastro ========== */
+
+.tabs-root {
   display: flex;
   align-content: center;
   justify-content: center;
+  font-weight: 800;
 }
 
-.tabs-root button{
+.tabs-root button {
   border: none;
   background-color: white;
   width: 12rem;
@@ -23,11 +52,61 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  cursor: pointer;
 }
 
-.touch-ripple-root{
+.touch-ripple-root {
   margin-top: 1rem;
-  border: 1px solid #2962FF;
+  border: 1px solid #2962ff;
   width: 100%;
+}
+
+/* ========= Botão google e facebook ========== */
+
+.social-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-btns .btns-socials {
+  padding: 0 2rem;
+}
+
+.social-btns .btns-socials .btn {
+  display: flex;
+  height: auto;
+
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.social-btns .btns-socials .btn .text {
+  margin-left: 1rem;
+}
+
+.social-btns .btns-socials .google-span #googleLoginAnchor {
+  background-color: white;
+  color: black;
+}
+
+/* ========= Separador ========== */
+.separator-auth {
+  margin: 1rem;
+}
+
+.separator-auth p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.separator-auth .line::after,
+.line::before {
+  background-color: rgb(200, 200, 200);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 45%;
 }
