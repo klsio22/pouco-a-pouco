@@ -30,7 +30,7 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
-  
+
 
   <title>Pouco a Pouco</title>
 </head>
@@ -60,21 +60,21 @@
 
       </div>
 
-      <div class="auth col s6">
+      <div class="auth-login col s6">
 
         <header>
           <div class="tabs-root ">
             <div>
               <button class="selection ">
                 <span>Entrar</span>
-                <span class="selector touch-ripple-root"></span>
+                <span class="selector "></span>
               </button>
             </div>
 
             <div>
               <button class="selection">
                 <span>Cadastrar</span>
-                <span class="selector "></span>
+                <span class="selector touch-ripple-root"></span>
               </button>
             </div>
 
@@ -82,8 +82,7 @@
 
         </header>
 
-        <div class="row">
-
+        <!-- <div class="auth row">
           <div class="social-btns">
             <div class="btns-socials">
               <span class="google-span">
@@ -125,12 +124,11 @@
                 </div>
               </div>
 
-
               <div class="checkboxe center">
                 <p>
                   <label>
                     <input type="checkbox" class="filled-in" />
-                    <span>Mantenha-me conectado</span>
+                    <span class="black-text">Mantenha-me conectado</span>
                   </label>
                 </p>
               </div>
@@ -146,41 +144,88 @@
               </div>
 
           </form>
-        </div>
+        </div> -->
 
-        <!-- <div class="row">
+        <div class="login row">
+
+          <div class="social-btns">
+            <div class="btns-socials">
+              <span class="google-span">
+                <div class="waves-effect waves-light btn google-btn" id="googleLoginAnchor">
+                  <img src="../assets/icon-google-logo.svg" alt="">
+                  <span class="google-span-text text">Google</span>
+                </div>
+              </span>
+            </div>
+            <div class="btns-socials">
+              <span class="facebook-span">
+                <div class="waves-effect waves-light btn indigo darken-4
+                facebook-btn">
+                  <img src="../assets/icon-facebook.svg" alt="" class="">
+                  <span class="facebook-span-text text">Facebook</span>
+                </div>
+              </span>
+            </div>
+          </div>
+
+          <div class="separator-auth">
+            <p class="line">OU</p>
+          </div>
+
           <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-              </div>
-            </div>
+
             <div class="row">
               <div class="input-field col s12">
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
+                <input id="text" placeholder="nome" type="text" class="validate">
+                <label for="text"></label>
               </div>
             </div>
+
+
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
+                <input id="email" placeholder="email" type="email" class="validate">
+                <label for="email"></label>
               </div>
             </div>
+
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
+                <input id="password" placeholder="Senha" type="password" class="validate">
+                <label for="password"></label>
+              </div>
+            </div>
+
+            <div class="checkboxe center">
+              <p>
+                <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span class="black-text">Mantenha-me conectado</span>
+                </label>
+              </p>
+            </div>
+
+
+            <div class="terms center">
+              <p>
+                Ao continuar, estou de acordo com os
+                <a href="#">
+                  Termos de Uso
+                </a>e
+                <a href="">
+                  Política de Privacidade
+                </a>do Mobills.
+              </p>
+            </div>
+
+            <div class="register-page center">
+              <div class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
+                <span class="enter-span-text text">Concordar e cadastrar</span>
               </div>
             </div>
 
           </form>
-        </div> -->
+        </div>
       </div>
 
     </div>

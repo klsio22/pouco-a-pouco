@@ -3,7 +3,7 @@ setInterval(window.onload = () => {
 }, 100);
 
 const elementRow = {
-  content: document.querySelector(".auth"),
+  content: document.querySelector(".auth-login"),
 
   changerClass() {
 
