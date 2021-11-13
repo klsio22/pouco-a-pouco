@@ -1,4 +1,8 @@
 @media (min-width: 800px) {
+  #logo{
+    width: 22vw;
+  }
+    
   html {
     font-size: 87.5%; /* 14px */
   }

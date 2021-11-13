@@ -1,7 +1,7 @@
 /* ========== Top ======= */
 #logo {
   color: var(--color-primary);
-  width: 50vh;
+  width: 30vh;
 }
 
 /* ========== Balencer ======= */
@@ -120,6 +120,10 @@
 /* ========== button ======= */
 .back {
   padding: 1rem;
+}
+
+.btn-back{
+  margin-left: 1rem;
 }
 
 .back-home {
