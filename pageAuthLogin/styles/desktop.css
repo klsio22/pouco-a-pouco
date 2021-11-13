@@ -1,0 +1,13 @@
+@media only screen and (min-width: 1024px) {
+  /* ========= Motivacional conteiner ========== */
+  .motivation h5 {
+    font-weight: bold;
+    font-size: 21px;
+  }
+
+  .motivation p {
+    margin: 1rem;
+  }
+
+
+}
