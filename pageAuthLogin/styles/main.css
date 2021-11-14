@@ -5,8 +5,6 @@
 }
 
 body {
-  background: 0;
-  color: 0;
   font-family: 400 16px "Poppins", sans-serif;
 }
 
@@ -103,4 +101,9 @@ p {
   position: relative;
   vertical-align: middle;
   width: 45%;
+}
+/* ========= Form ========== */
+.alert span{
+  opacity: 0.6;
+  color: red;
 }

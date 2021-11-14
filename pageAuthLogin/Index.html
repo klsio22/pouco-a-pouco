@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="./styles/mobile.css">
 
   <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+  <!--  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script> -->
 
 
   <title>Pouco a Pouco</title>
@@ -112,14 +112,14 @@
 
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" placeholder="Seu email" type="email" class="validate">
+                  <input id="email" placeholder="Seu email" type="email" class="validateDate">
                   <label for="email"></label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="password" placeholder="Senha" type="password" class="validate">
+                  <input id="password" placeholder="Senha" type="password" class="validateDate">
                   <label for="password"></label>
                 </div>
               </div>
@@ -172,27 +172,38 @@
             <p class="line">OU</p>
           </div>
 
-          <form class="col s12">
+          <!-- ======== Form Concordar e cadastrar ========== -->
+
+          <form class="col s12" name="data" id="toSend">
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="text" placeholder="nome" type="text" class="validate">
-                <label for="text"></label>
+                <input id="text-name" placeholder="Nome" type="text" required class="validate" value>
+                <label for="text-name"></label>
+                <div id="requerid-name" class="alert">
+                  <span>Nome obrigatório</span>
+                </div>
               </div>
             </div>
 
-
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" placeholder="email" type="email" class="validate">
+                <input id="email" placeholder="Email" type="email" required name="email" class="validate">
                 <label for="email"></label>
+                <div id="requerid-email" class="alert">
+                  <span>Email obrigatório</span>
+                </div>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" placeholder="Senha" type="password" class="validate">
+                <input id="password" placeholder="Senha" type="password" required class="validate">
                 <label for="password"></label>
+                <div id="requerid-password" class="alert">
+
+                  <span>Senha obrigatória</span>
+                </div>
               </div>
             </div>
 
@@ -202,9 +213,9 @@
                   <input type="checkbox" class="filled-in" />
                   <span class="black-text">Mantenha-me conectado</span>
                 </label>
+
               </p>
             </div>
-
 
             <div class="terms center">
               <p>
@@ -219,9 +230,9 @@
             </div>
 
             <div class="register-page center">
-              <div class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
+              <button id="register" type="submit" class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
                 <span class="enter-span-text text">Concordar e cadastrar</span>
-              </div>
+              </button>
             </div>
 
           </form>
@@ -232,10 +243,7 @@
   </main>
 
   <script src="./js/center-auth.js"></script>
-  <script>
-
-
-  </script>
+  <script src="./js/validator-form.js"></script>
 
 </body>
 
