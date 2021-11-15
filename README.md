@@ -15,7 +15,7 @@
 
 - [ ] prompt
 
-- [ ] alert
+- [x] alert
 
 - [ ] confirm
 
