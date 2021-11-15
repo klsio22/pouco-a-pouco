@@ -27,7 +27,7 @@
 
 ## Funções
 
-- [ ] Função anônima com argumento
+- [x] Função anônima com argumento
 
 - [ ] Função anônima sem argumento
 
@@ -69,7 +69,7 @@
 
 - [ ] Via getElementsByTagName()
 
-- [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
+- [x] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 ## Tratadores de Evento
 

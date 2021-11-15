@@ -45,7 +45,7 @@
 
   <main>
 
-    <div class="container row">
+    <div id="main" class="container row">
       <div id="motivation" class="motivation col s6">
 
         <h5>Hora de transformar suas finanças.</h5>
@@ -174,11 +174,11 @@
 
           <!-- ======== Form Concordar e cadastrar ========== -->
 
-          <form class="col s12" name="data" id="toSend">
+          <form class="col s12" name="data" id="toSend" >
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="text-name" placeholder="Nome" type="text" required class="validate" value>
+                <input id="text-name" placeholder="Nome" type="text"  class="validate" value>
                 <label for="text-name"></label>
                 <div id="requerid-name" class="alert">
                   <span>Nome obrigatório</span>
@@ -188,7 +188,7 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" placeholder="Email" type="email" required name="email" class="validate">
+                <input id="email" placeholder="Email" type="email"  name="email" class="validate">
                 <label for="email"></label>
                 <div id="requerid-email" class="alert">
                   <span>Email obrigatório</span>
@@ -198,7 +198,7 @@
 
             <div class="row">
               <div class="input-field col s12">
-                <input id="password" placeholder="Senha" type="password" required class="validate">
+                <input id="password" placeholder="Senha" type="password"  class="validate">
                 <label for="password"></label>
                 <div id="requerid-password" class="alert">
 
@@ -230,7 +230,7 @@
             </div>
 
             <div class="register-page center">
-              <button id="register" type="submit" class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
+              <button id="register" type="submit" value="Submit" class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
                 <span class="enter-span-text text">Concordar e cadastrar</span>
               </button>
             </div>

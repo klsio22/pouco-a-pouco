@@ -1,21 +1,35 @@
 const validateDate = {
   onSubmit: document.querySelector('#toSend'),
   inputEnter: document.querySelector('input#register'),
-  checkname: document.querySelector('input#text-name'),
+  name: document.querySelector('input#text-name'),
+  email: document.querySelector('input#email'),
+  password: document.querySelector('input#password'),
+
+
+  createElement(){
+
+  },
+
 
   getValues() {
     return {
-      checkname: validateDate.checkname.value,
+      name: validateDate.name.value,
+      email: validateDate.email.value,
+      password: validateDate.password.value,
     }
 
   },
 
   validateFields() {
     const {
-      checkname,
-    } = getValues();
+      name,
+      email,
+      password
+    } = validateDate.getValues();
 
-    if (checkname.trim() === "") {
+    if (name.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === "") {
       throw new Error("Por favor , preencha todos os campos")
     }
   },
@@ -24,12 +38,12 @@ const validateDate = {
     event.preventDefault();
 
     try {
-      this.validateFields();
+      validateDate.validateFields();
 
     } catch (err) {
       alert(err.message)
     }
-    console.log(event)
+    //console.log(event)
   },
 
   submit() {
