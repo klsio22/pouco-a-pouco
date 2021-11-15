@@ -9,7 +9,7 @@ body {
 }
 
 .top {
-  padding: 1rem 0 0 1rem;
+  padding: 1rem;
 }
 
 .btn {
@@ -30,9 +30,6 @@ p {
   min-width: 23rem;
 }
 
-#main {
-  margin-bottom: 0;
-}
 
 /* ========= Botões de entrada e cadastro ========== */
 

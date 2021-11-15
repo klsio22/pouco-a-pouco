@@ -1,6 +1,7 @@
 const validateDate = {
   onSubmit: document.getElementById('toSend'),
-  register: document.getElementsByClassName('register'),
+  register: document.querySelector('.register'),
+  inputEnter: document.getElementById('register'),
   name: document.querySelector('input#text-name'),
   email: document.querySelector('input#email'),
   password: document.querySelector('input#password'),
@@ -19,8 +20,7 @@ const validateDate = {
   },
 
   createElementSpanName() {
-    const spanName = document.createElement('span');
-
+    let spanName = document.createElement('span');
     spanName.innerHTML = 'Nome obrigatório';
     validateDate.requeridName.appendChild(spanName);
   },
@@ -37,6 +37,13 @@ const validateDate = {
     spanPassword.innerHTML = 'Senha obrigatória';
     validateDate.requeridPassword.appendChild(spanPassword);
   },
+
+  clearElementschilds(){
+    validateDate.requeridName.innerHTML= '';
+    validateDate.requeridEmail.innerHTML = '';
+    validateDate.requeridPassword.innerHTML = '';
+  },
+
 
   createElementCaseEmpty() {
     const {
@@ -57,7 +64,7 @@ const validateDate = {
 
 
   desableResgistar() {
-    /*  validateDate.register.classList.toggle('disabled') */
+    validateDate.register.classList.toggle('disabled');
     console.log("Disabled")
   },
 
@@ -71,8 +78,8 @@ const validateDate = {
     if (name.trim() === "" ||
       email.trim() === "" ||
       password.trim() === "") {
-      validateDate.desableResgistar();
-      validateDate.createElementCaseEmpty() ;
+     // validateDate.desableResgistar();
+      validateDate.createElementCaseEmpty();
       throw new Error('Por favor , preencha todos os campos')
     }
 
@@ -82,6 +89,10 @@ const validateDate = {
     event.preventDefault();
 
     try {
+      /* Limpar messagens de avisos */
+      validateDate.clearElementschilds();
+
+      /* Validação dos campos  */
       validateDate.validateFields();
 
     } catch (err) {
@@ -90,8 +101,17 @@ const validateDate = {
     //console.log(event)
   },
 
+  validateEnter(e) {
+    let key = e.which || e.keyCode;
+    if (key === 13) {
+      console.log('carregou enter o valor digitado foi: ' + this.value);
+    }
+  },
+
   submit() {
     validateDate.onSubmit.addEventListener('submit', validateDate.checkForm)
+
+    validateDate.inputEnter.addEventListener('keyup', validateDate.validateEnter)
   }
 
 }
