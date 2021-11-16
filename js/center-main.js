@@ -1,6 +1,6 @@
 setInterval(window.onload = () => {
   elementRow.changerClass();
-}, 100);
+}, 10);
 
 const elementRow = {
   content: document.querySelector(".content"),
