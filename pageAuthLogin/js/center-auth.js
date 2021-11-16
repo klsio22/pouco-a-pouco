@@ -1,17 +1,13 @@
 setInterval(window.onload = () => {
-  elementRow.changerClass();
+  authLogin();
 }, 10);
 
-const elementRow = {
-  content: document.querySelector(".auth-login"),
+function authLogin() {
+  content = document.querySelector(".auth-login")
 
-  changerClass() {
+  content.classList.toggle("s12", window.innerWidth <= 1024)
+  // console.log("estou aqui")
 
-    elementRow.content.classList.toggle("s12", window.innerWidth <= 1024)
-    // console.log("estou aqui")
-
-    elementRow.content.classList.toggle("s6", window.innerWidth >= 1024)
-
-  }
+  content.classList.toggle("s6", window.innerWidth >= 1024)
 
 }

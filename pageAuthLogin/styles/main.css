@@ -5,6 +5,7 @@
 }
 
 body {
+  min-width:350px;
   font-family: 400 16px "Poppins", sans-serif;
 }
 
@@ -44,6 +45,10 @@ p {
   border: none;
   background-color: white;
   width: 12rem;
+}
+
+.tabs-root button:hover{
+  color:green;
 }
 
 .selection {

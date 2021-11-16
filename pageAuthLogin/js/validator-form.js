@@ -38,10 +38,11 @@ const validateDate = {
     validateDate.requeridPassword.appendChild(spanPassword);
   },
 
-  clearElementschilds(){
-    validateDate.requeridName.innerHTML= '';
-    validateDate.requeridEmail.innerHTML = '';
-    validateDate.requeridPassword.innerHTML = '';
+
+  clearElementsChilds() {
+    this.requeridName.innerHTML = '';
+    this.requeridEmail.innerHTML = '';
+    this.requeridPassword.innerHTML = '';
   },
 
 
@@ -78,9 +79,11 @@ const validateDate = {
     if (name.trim() === "" ||
       email.trim() === "" ||
       password.trim() === "") {
-     // validateDate.desableResgistar();
+      // validateDate.desableResgistar();
       validateDate.createElementCaseEmpty();
       throw new Error('Por favor , preencha todos os campos')
+    } else {
+      alert('Tudo ok!')
     }
 
   },
@@ -90,7 +93,8 @@ const validateDate = {
 
     try {
       /* Limpar messagens de avisos */
-      validateDate.clearElementschilds();
+      validateDate.clearElementsChilds();
+
 
       /* Validação dos campos  */
       validateDate.validateFields();
@@ -109,11 +113,42 @@ const validateDate = {
   },
 
   submit() {
-    validateDate.onSubmit.addEventListener('submit', validateDate.checkForm)
 
+    validateDate.onSubmit.addEventListener('submit', validateDate.checkForm)
     validateDate.inputEnter.addEventListener('keyup', validateDate.validateEnter)
   }
 
 }
 
+const validateFieldsonFocus = {
+
+  //object.addEventListener("focus", myScript);
+  //object.addEventListener("blur", myScript);
+
+  activeFocos() {
+    validateDate.clearElementsChilds();
+  },
+
+  activeblur() {
+    validateDate.clearElementsChilds();
+    validateDate.createElementCaseEmpty()
+  },
+
+  exec() {
+
+    validateDate.name.addEventListener('focus', validateFieldsonFocus.activeFocos)
+    validateDate.email.addEventListener('focus', validateFieldsonFocus.activeFocos)
+    validateDate.password.addEventListener('focus', validateFieldsonFocus.activeFocos)
+
+    validateDate.name.addEventListener('blur', validateFieldsonFocus.activeblur)
+    validateDate.email.addEventListener('blur', validateFieldsonFocus.activeblur)
+    validateDate.password.addEventListener('blur', validateFieldsonFocus.activeblur)
+
+  }
+
+}
+
 validateDate.submit();
+(function main() {
+  validateFieldsonFocus.exec();
+})();

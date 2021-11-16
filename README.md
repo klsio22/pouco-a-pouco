@@ -29,13 +29,13 @@
 
 - [x] Função anônima com argumento
 
-- [ ] Função anônima sem argumento
+- [x] Função anônima sem argumento
 
 - [x] Função anônima com retorno
 
-- [ ] Função auto-executável
+- [x] Função auto-executável
 
-- [ ] Função com nome
+- [x] Função com nome
 
 - [x] Função aninhada/local - declarar uma função dentro de outra
 
@@ -49,9 +49,9 @@
 
 - [ ] Evento de movimento do mouse
 
-- [ ] Evento de teclado - usar charCode ou keyCode
+- [x] Evento de teclado - usar charCode ou keyCode
 
-- [ ] Eventos de formulário - onfocus e onblur
+- [x] Eventos de formulário - onfocus e onblur
 
 - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
 
@@ -77,9 +77,9 @@
 
 - [ ] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
 
-- [ ] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
+- [x] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
 
-- [ ] Usar o operador this em funções tratadoras de eventos.
+- [x] Usar o operador this em funções tratadoras de eventos.
 
 ## Objetos Nativos
 
@@ -89,7 +89,7 @@
 
 - [ ] Usar pelo menos 3 métodos para manipulação de string
 
-- [ ] String Template
+- [x] String Template
 
 ## Objetos
 
@@ -97,7 +97,7 @@
 
 - [x] Criar objetos a partir da definição de classes do ES6
 
-- [ ] Usar herança prototipal nativa ou herança de classes do ES6
+- [x] Usar herança prototipal nativa ou herança de classes do ES6
 
 ## Qualidade do código
 

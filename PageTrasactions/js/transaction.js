@@ -279,7 +279,7 @@ const App = {
     }) */
     DOM.updateBalencer();
 
-    //Inicializa ca captura de dados do formulário
+    //Inicializa a captura de dados do formulário
     Form.submit();
 
     Storage.set(Transaction.all)
