@@ -53,7 +53,7 @@
 
 - [x] Eventos de formulário - onfocus e onblur
 
-- [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
+- [x] Imprimir alguma propriedade do objeto event recebido como parâmetro
 
 - [ ] Propagação de eventos no modelo bolha (usar target e currentTarget, ou seja, disparar o evento em um elemento filho e capturar em um elemento pai)
 
@@ -111,9 +111,9 @@
 
 - [ ] Usar pasta assets e subpastas resources e libraries para organizar o código
 
-- [ ] Usar let ou const ao invés de var
+- [x] Usar let ou const ao invés de var
 
-- [ ] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
+- [x] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
 
 ## Formulário
 
@@ -129,7 +129,7 @@
 
 - [ ] Ler e escrever em elementos input com a propriedade value
 
-- [ ] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
+- [x] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
 
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
 
