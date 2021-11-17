@@ -72,6 +72,10 @@ const validateDate = {
     validateDate.register.classList.remove('disabled');
   },
 
+  redirect(){
+    window.location.href="../PageTrasactions/index.html"
+  },
+
   validateFields() {
     const {
       name,
@@ -87,7 +91,7 @@ const validateDate = {
       throw new Error('Por favor , preencha todos os campos')
     } else {
       validateDate.removeDisabled();
-      alert('Tudo ok!')
+      validateDate.redirect();
     }
 
   },
@@ -99,12 +103,11 @@ const validateDate = {
       /* Limpar messagens de avisos */
       validateDate.clearElementsChilds();
 
-
       /* Validação dos campos  */
       validateDate.validateFields();
 
     } catch (err) {
-      alert(err.message)
+      alert(err.message)  
     }
     //console.log(event)
   },
