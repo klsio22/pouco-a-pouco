@@ -64,9 +64,12 @@ const validateDate = {
   },
 
 
-  desableResgistar() {
-    validateDate.register.classList.toggle('disabled');
-    console.log("Disabled")
+  addDisabled() {
+    validateDate.register.classList.add('disabled');
+  },
+
+  removeDisabled() {
+    validateDate.register.classList.remove('disabled');
   },
 
   validateFields() {
@@ -79,10 +82,11 @@ const validateDate = {
     if (name.trim() === "" ||
       email.trim() === "" ||
       password.trim() === "") {
-      // validateDate.desableResgistar();
+      validateDate.addDisabled();
       validateDate.createElementCaseEmpty();
       throw new Error('Por favor , preencha todos os campos')
     } else {
+      validateDate.removeDisabled();
       alert('Tudo ok!')
     }
 
@@ -125,6 +129,23 @@ const validateFieldsonFocus = {
   //object.addEventListener("focus", myScript);
   //object.addEventListener("blur", myScript);
 
+  validateFields() {
+    const {
+      name,
+      email,
+      password
+    } = validateDate.getValues();
+
+    if (name.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === "") {
+      validateDate.addDisabled();
+    } else {
+      validateDate.removeDisabled();
+    }
+
+  },
+
   activeFocos() {
     validateDate.clearElementsChilds();
   },
@@ -132,6 +153,8 @@ const validateFieldsonFocus = {
   activeblur() {
     validateDate.clearElementsChilds();
     validateDate.createElementCaseEmpty()
+
+    validateFieldsonFocus.validateFields();
   },
 
   exec() {

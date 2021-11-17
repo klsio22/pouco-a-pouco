@@ -5,12 +5,12 @@
 }
 
 body {
-  min-width:350px;
+  min-width: 350px;
   font-family: 400 16px "Poppins", sans-serif;
 }
 
 .top {
-  padding: 1rem;
+  padding: 1rem 0 0 1rem;
 }
 
 .btn {
@@ -23,7 +23,7 @@ p {
   margin: 0.8rem;
 }
 
-.terms p{
+.terms p {
   font-size: 0.7rem;
 }
 
@@ -47,8 +47,8 @@ p {
   width: 12rem;
 }
 
-.tabs-root button:hover{
-  color:green;
+.tabs-root button:hover {
+  color: green;
 }
 
 .selection {
@@ -116,3 +116,4 @@ p {
   opacity: 0.6;
   color: red;
 }
+
