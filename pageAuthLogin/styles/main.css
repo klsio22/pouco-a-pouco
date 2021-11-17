@@ -31,7 +31,6 @@ p {
   min-width: 23rem;
 }
 
-
 /* ========= Botões de entrada e cadastro ========== */
 
 .tabs-root {
@@ -88,7 +87,8 @@ p {
   padding-right: 2rem;
 }
 
-.social-btns .btns-socials .google-span #googleLoginAnchor {
+.social-btns .btns-socials .google-span #googleAuthAnchor,
+#googleLoginAnchor {
   background-color: white;
   color: black;
 }
@@ -111,9 +111,49 @@ p {
   vertical-align: middle;
   width: 45%;
 }
+
 /* ========= Form ========== */
 .alert span {
   opacity: 0.6;
   color: red;
 }
 
+.authLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s;
+  direction: ltr;
+  will-change: transform;
+  transform: translate(0%, 0px);
+}
+
+.authLogin {
+  width: 100%;
+  flex-shrink: 0;
+  overflow: auto;
+
+  margin-right: 1rem;
+}
+
+.auth {
+  width: 100%;
+  flex-shrink: 0;
+  overflow: auto;
+
+  margin-right: 1rem;
+}
+
+.login {
+  width: 100%;
+  flex-shrink: 0;
+  overflow: auto;
+
+  padding-right: 1rem;
+  
+}

@@ -2,9 +2,9 @@ const validateDate = {
   onSubmit: document.getElementById('toSend'),
   register: document.querySelector('.register'),
   inputEnter: document.getElementById('register'),
-  name: document.querySelector('input#text-name'),
-  email: document.querySelector('input#email'),
-  password: document.querySelector('input#password'),
+  name: document.querySelector('input#name-login'),
+  email: document.querySelector('input#email-login'),
+  password: document.querySelector('input#password-login'),
 
   requeridName: document.getElementById('requerid-name'),
   requeridEmail: document.getElementById('requerid-email'),
