@@ -2,6 +2,7 @@ const validateDate = {
   onSubmit: document.getElementById('toSend'),
   register: document.querySelector('.register'),
   inputEnter: document.getElementById('register'),
+
   name: document.querySelector('input#name-login'),
   email: document.querySelector('input#email-login'),
   password: document.querySelector('input#password-login'),
@@ -62,7 +63,6 @@ const validateDate = {
     if (password.trim() === "")
       this.createElementSpanPassword()
   },
-
 
   addDisabled() {
     validateDate.register.classList.add('disabled');

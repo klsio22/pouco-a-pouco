@@ -9,6 +9,10 @@ body {
   font-family: 400 16px "Poppins", sans-serif;
 }
 
+main {
+  margin-top: 1rem;
+}
+
 .top {
   padding: 1rem 0 0 1rem;
 }
@@ -29,6 +33,22 @@ p {
 
 .auth {
   min-width: 23rem;
+}
+
+.motivation-img{
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+}
+
+.motivation-img:hover {
+  -webkit-transform:scale(1.2); /* Safari and Chrome */
+  -moz-transform:scale(1.2); /* Firefox */
+  -ms-transform:scale(1.2); /* IE 9 */
+  -o-transform:scale(1.2); /* Opera */
+   transform:scale(1.2);
 }
 
 /* ========= Botões de entrada e cadastro ========== */
@@ -118,42 +138,12 @@ p {
   color: red;
 }
 
-.authLogin {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .block {
-  display: flex;
-  flex-direction: row;
-  transition: transform 0.35s cubic-bezier(0.15, 0.3, 0.25, 1) 0s;
-  direction: ltr;
-  will-change: transform;
-  transform: translate(0%, 0px);
-}
+  display: none;
 
-.authLogin {
-  width: 100%;
-  flex-shrink: 0;
-  overflow: auto;
-
-  margin-right: 1rem;
-}
-
-.auth {
-  width: 100%;
-  flex-shrink: 0;
-  overflow: auto;
-
-  margin-right: 1rem;
-}
-
-.login {
-  width: 100%;
-  flex-shrink: 0;
-  overflow: auto;
-
-  padding-right: 1rem;
-  
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 2s ease;
 }

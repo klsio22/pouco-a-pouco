@@ -21,7 +21,7 @@
 
 ## Temporizadores
 
-- [x] setInterval
+- [ ] setInterval
 
 - [x] setTimeout
 
@@ -35,7 +35,7 @@
 
 - [x] Função auto-executável
 
-- [x] Função com nome
+- [ ] Função com nome
 
 - [x] Função aninhada/local - declarar uma função dentro de outra
 
@@ -121,11 +121,11 @@
 
 - [x] Validação de formulário com HTML5 API
 
-  Customizar as mensagens nos balões de mensagem
+  - [ ] Customizar as mensagens nos balões de mensagem
 
-  Usar os atributos de validação dos inputs
+  - [ ] Usar os atributos de validação dos inputs
 
-  Usar expressões regulares
+  - [ ] Usar expressões regulares
 
 - [ ] Ler e escrever em elementos input com a propriedade value
 
