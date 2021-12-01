@@ -1,4 +1,4 @@
-setTimeout(() => {
+ setTimeout(() => {
   if (window.confirm("Você deseja receber atualizações e novidades? ")) {
     alert('Obrigado pela atenção!')
   }
@@ -16,4 +16,4 @@ const motivacional = {
 
   }
 
-}
+} 

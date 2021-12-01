@@ -3,7 +3,7 @@ const validateDate = {
   register: document.querySelector('.register'),
   inputEnter: document.getElementById('register'),
   name: document.querySelector('input#text-name'),
-  email: document.querySelector('input#email'),
+  email: document.querySelector('input#email'), 
   password: document.querySelector('input#password'),
 
   requeridName: document.getElementById('requerid-name'),
