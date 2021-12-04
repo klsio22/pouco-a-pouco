@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Icon site -->
+  <link rel="icon" href="../public/images/favicon.ico" />
+  <!-- Reset Page -->
+  <link rel="stylesheet" href="../assets/resources/styles/reset.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Materialize -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/resources/styles/main.css" />
+  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/authLogin.css">
+  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/desktop.css">
+  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/mobile.css">
+
+  <!-- jquery -->
+  <!--  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script> -->
+
+
+  <title>Pouco a Pouco</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="top">
+      <img src="../public/images/logo-and-icon.svg" alt="">
+    </div>
+  </header>
+
+  <main>
+
+    <div id="main" class="container row">
+
+      <div id="motivation" class="motivation col xl6 l6">
+
+        <h5>Hora de transformar suas finanças.</h5>
+        <div>
+          <img class="motivation-img" src="../public/images/router.png" alt="">
+        </div>
+
+        <p>
+          O caminho está a sua frente. Você já deu seu primeiro passo rumo à transformação financeira e nós te
+          guiaremos nessa jornada.
+        </p>
+
+      </div>
+
+      <div class="col xl6 l6 m12 s12">
+
+        <header>
+          <div class="tabs-root ">
+            <div class="button-selector">
+              <button class="selection to-enter" disabled>
+                <span>Entrar</span>
+                <span class="selection selector-enter touch-ripple-root"></span>
+              </button>
+            </div>
+
+            <div class="button-selector">
+              <button class="selection to-register">
+                <span>Cadastrar</span>
+                <span class="selection selector-login "></span>
+              </button>
+            </div>
+
+          </div>
+
+        </header>
+
+        <div class="authLogin row">
+
+          <div class="blocks">
+
+            <div class="auth display-initial">
+
+              <div class="social-btns">
+                <div class="btns-socials">
+                  <div class="google-span">
+                    <div class="waves-effect waves-light btn google-btn" id="googleAuthAnchor">
+                      <img src="../public/images/icon-google-logo.svg" alt="">
+                      <span class="google-span-text text">Google</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="btns-socials">
+                  <div class="facebook-span">
+                    <div class="waves-effect waves-light btn indigo darken-4 facebook-btn">
+                      <img src="../public/images/icon-facebook.svg" alt="mini icone do facebook" class="">
+                      <span class="facebook-span-text text">Facebook</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="separator-auth">
+                <p class="line">OU</p>
+              </div>
+
+              <form class="">
+                <div class="row">
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email-auth" placeholder="Seu email" type="email" class="validateDate">
+                      <label for="email-auth"></label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password-auth" placeholder="Senha" type="password" class="validateDate">
+                      <label for="password-auth"></label>
+                    </div>
+                  </div>
+
+                  <div class="checkboxe center">
+                    <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span class="black-text">Mantenha-me conectado</span>
+                      </label>
+                    </p>
+                  </div>
+
+                  <div class="enter-page center">
+                    <div class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
+                      <span class="enter-span-text text">Entrar</span>
+                    </div>
+                  </div>
+
+                  <div class="center ">
+                    <a href="#">esqueceu a senha ?</a>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+
+            <div class="login display-none ">
+
+              <div class="">
+
+                <div class="social-btns">
+                  <div class="btns-socials">
+                    <div class="google-span">
+                      <div class="waves-effect waves-light btn google-btn" id="googleLoginAnchor">
+                        <img src="../public/images/icon-google-logo.svg" alt="">
+                        <span class="google-span-text text">Google</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btns-socials">
+                    <div class="facebook-span">
+                      <div class="waves-effect waves-light btn indigo darken-4 facebook-btn">
+                        <img src="../public/images/icon-facebook.svg" alt="" class="">
+                        <span class="facebook-span-text text">Facebook</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="separator-auth">
+                  <p class="line">OU</p>
+                </div>
+              </div>
+              <!-- ======== Form Concordar e cadastrar ========== -->
+
+              <form class="toSend " name="data" id="toSend">
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="name-login" placeholder="Nome" name="name" type="text" class="validate" value>
+                    <label for="name-login"></label>
+                    <div id="requerid-name" class="alert"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email-login" placeholder="Email" type="email" name="email" class="validate">
+                    <label for="email-login"></label>
+                    <div id="requerid-email" class="alert"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password-login" placeholder="Senha" name="password" type="password" class="validate">
+                    <label for="password-login"></label>
+                    <div id="requerid-password" class="alert"></div>
+                  </div>
+                </div>
+
+                <div class="checkboxe center">
+                  <p>
+                    <label>
+                      <input type="checkbox" class="filled-in" />
+                      <span class="black-text">Mantenha-me conectado</span>
+                    </label>
+
+                  </p>
+                </div>
+
+                <div class="terms center">
+                  <p>
+                    Ao continuar, estou de acordo com os
+                    <a href="#">
+                      Termos de Uso
+                    </a>e
+                    <a href="">
+                      Política de Privacidade
+                    </a>do Mobills.
+                  </p>
+                </div>
+
+                <div class="register-page center">
+                  <button id="register" type="submit" value="Submit"
+                    class="waves-effect waves-light light-blue accent-4 btn register">
+
+                    <span class="enter-span-text text">
+                      Concordar e cadastrar
+                    </span>
+
+                  </button>
+
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/resources/scripts/validator-form.js"></script>
+
+  <script src="../assets/resources/scripts/change-auth-login.js"></script>
+
+</body>
+
+</html>

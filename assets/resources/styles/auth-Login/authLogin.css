@@ -1,16 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-width:350px;
-  font-family: 400 16px "Poppins", sans-serif;
+main {
+  margin-top: 1rem;
 }
 
 .top {
-  padding: 1rem;
+  padding: 1rem 0 0 1rem;
 }
 
 .btn {
@@ -23,7 +16,7 @@ p {
   margin: 0.8rem;
 }
 
-.terms p{
+.terms p {
   font-size: 0.7rem;
 }
 
@@ -47,7 +40,6 @@ p {
    transform:scale(1.2);
 }
 
-
 /* ========= Botões de entrada e cadastro ========== */
 
 .tabs-root {
@@ -63,8 +55,8 @@ p {
   width: 12rem;
 }
 
-.tabs-root button:hover{
-  color:green;
+.tabs-root button:hover {
+  color: green;
 }
 
 .selection {
@@ -76,7 +68,12 @@ p {
 
 .touch-ripple-root {
   margin-top: 1rem;
-  border: 1px solid #2962ff;
+  background-color: rgb(0, 47, 255);
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
   width: 100%;
 }
 
@@ -104,7 +101,8 @@ p {
   padding-right: 2rem;
 }
 
-.social-btns .btns-socials .google-span #googleLoginAnchor {
+.social-btns .btns-socials .google-span #googleAuthAnchor,
+#googleLoginAnchor {
   background-color: white;
   color: black;
 }
@@ -127,8 +125,29 @@ p {
   vertical-align: middle;
   width: 45%;
 }
+
 /* ========= Form ========== */
 .alert span {
   opacity: 0.6;
   color: red;
+}
+
+.display-initial{
+  display: initial;
+
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 2s ease;
+}
+
+.display-none {
+  display: none;
+
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 2s ease;
 }

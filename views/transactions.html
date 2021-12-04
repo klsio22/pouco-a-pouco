@@ -6,24 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" href="../assets/favicon.ico">
-  <link rel="stylesheet" href="../styles/reset.css">
+  <!-- Icon site -->
 
+  <link rel="icon" href="../public/images/favicon.ico">
+
+  <!-- Reset Page -->
+  <link rel="stylesheet" href="../assets/resources/styles/reset.css">
+
+  <!-- Fonts -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
     rel="stylesheet" />
 
-
   <!-- Materialize -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
-  <link rel="stylesheet" href="./styles/main.css">
-  <link rel="stylesheet" href="./styles/classes_and_id.css">
-  <link rel="stylesheet" href="./styles/desktop.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/resources/styles/main.css">
 
+  <link rel="stylesheet" href="../assets/resources/styles/transactions/transaction.css">
+  <link rel="stylesheet" href="../assets/resources/styles/transactions/classes_and_id.css">
+  <link rel="stylesheet" href="../assets/resources/styles/transactions/desktop.css">
 
   <title>Pouco a Pouco - Transações</title>
 </head>
@@ -31,7 +37,7 @@
 <body>
 
   <header>
-    <img id="logo" src="../assets/logo-white.svg" alt="Logo Dev Finance">
+    <img id="logo" src="../public/images/logo-white.svg" alt="Logo Pouco a Pouco">
   </header>
 
   <main id="container" class="container">
@@ -40,7 +46,7 @@
       <div class="card">
         <h3>
           <span>Entradas</span>
-          <img src="../assets/income.svg" alt="">
+          <img src="../public/images/income.svg" alt="Renda total">
         </h3>
         <p id="incomeDisplay">R$ 0,00</p>
       </div>
@@ -48,7 +54,7 @@
       <div class="card">
         <h3>
           <span>Saidas</span>
-          <img src="../assets/expense.svg" alt="">
+          <img src="../public/images/expense.svg" alt="Despesas totais">
         </h3>
         <p id="expenseDisplay">R$ 0,00</p>
       </div>
@@ -56,7 +62,7 @@
       <div class="card total">
         <h3>
           <span>Total</span>
-          <img src="../assets/total.svg" alt="">
+          <img src="../public/images/total.svg" alt="Total">
         </h3>
         <p id="totalDisplay">R$ 0,00</p>
       </div>
@@ -128,12 +134,11 @@
 
       <div id="icon-back" class="icon-back">
         <a href="../index.html" class="back-home">
-          <img src="../assets/arrow-left.svg" alt="arrow-left">
+          <img src="../public/images/arrow-left.svg" alt="seta esquerda para voltar">
         </a>
       </div>
 
       <div id="btn-back" class="btn-back">
-
         <a href="../index.html" class="waves-effect waves-light light-blue accent-4 btn back-home">
           voltar
         </a>
@@ -148,92 +153,92 @@
       <div class="row">
         <div class="col l3 s12">
           <h6 class="blue-text">Social</h6>
-            <div class="images">
-              <img src="../assets/Twitter.png" alt="">
-              <img src="../assets/instagram.png" alt="">
-              <img src="../assets/facebook.png" alt="">
-              <img src="../assets/telegram.png" alt="">
-            </div>
+          <div class="images">
+            <img src="../public/images/social-media/twitter.svg" alt="icone-do-twitter ">
+            <img src="../public/images/social-media/instagram.svg" alt="icone-do-instagram">
+            <img src="../public/images/social-media/facebook.svg" alt="icone-do-facebook">
+            <img src="../public/images/social-media/telegram.svg" alt="icone-do-telegram">
+          </div>
         </div>
 
         <div class="col l2 offset-l1 s12 black-text">
           <h6 class="blue-text">Pouca a pouco</h6>
-            <ul class="">
-              <li class="active">
-                <a class="black-text text-lighten-3" href="#">Planos</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Recursos</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Central de Ajuda
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Materiais gratuitos
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Calculadoras</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Glossário</a>
-              </li>
-            </ul>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#">Planos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Recursos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Central de Ajuda
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Materiais gratuitos
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Calculadoras</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Glossário</a>
+            </li>
+          </ul>
         </div>
 
         <div class="col l2 offset-l1 s12 black-text">
           <h6 class="blue-text">Guias</h6>
-            <ul class="">
-              <li class="active">
-                <a class="black-text text-lighten-3" href="#">Como economizar</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Recursos</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Planejamento financeiro
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Finanças pessoais
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Educação financeira</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Melhores cartões de crédito</a>
-              </li>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#">Como economizar</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Recursos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Planejamento financeiro
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Finanças pessoais
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Educação financeira</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Melhores cartões de crédito</a>
+            </li>
 
-              <li>
-                <a class="black-text text-lighten-3" href="#">Planilha de controle financeiro</a>
-              </li>
-            </ul>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Planilha de controle financeiro</a>
+            </li>
+          </ul>
         </div>
 
         <div class="col l2 offset-l1 s12 black-text">
           <h6 class="blue-text">Empresas</h6>
-            <ul class="">
-              <li class="active">
-                <a class="black-text text-lighten-3" href="#!">Equipe</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#!">Carreiras</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#!">Imprensa</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#!">
-                  Contato
-                </a>
-              </li>
-            </ul>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#!">Equipe</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">Carreiras</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">Imprensa</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">
+                Contato
+              </a>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -245,7 +250,7 @@
     </div>
   </footer>
 
-  <script src="./js/transaction.js"></script>
+  <script src="../assets/resources/scripts/transaction.js"></script>
 </body>
 
 </html>

@@ -2,9 +2,10 @@ const validateDate = {
   onSubmit: document.getElementById('toSend'),
   register: document.querySelector('.register'),
   inputEnter: document.getElementById('register'),
-  name: document.querySelector('input#text-name'),
-  email: document.querySelector('input#email'), 
-  password: document.querySelector('input#password'),
+
+  name: document.querySelector('input#name-login'),
+  email: document.querySelector('input#email-login'),
+  password: document.querySelector('input#password-login'),
 
   requeridName: document.getElementById('requerid-name'),
   requeridEmail: document.getElementById('requerid-email'),
@@ -63,10 +64,16 @@ const validateDate = {
       this.createElementSpanPassword()
   },
 
+  addDisabled() {
+    validateDate.register.classList.add('disabled');
+  },
 
-  desableResgistar() {
-    validateDate.register.classList.toggle('disabled');
-    console.log("Disabled")
+  removeDisabled() {
+    validateDate.register.classList.remove('disabled');
+  },
+
+  redirect(){
+    window.location.href="../PageTrasactions/index.html"
   },
 
   validateFields() {
@@ -79,11 +86,12 @@ const validateDate = {
     if (name.trim() === "" ||
       email.trim() === "" ||
       password.trim() === "") {
-      // validateDate.desableResgistar();
+      validateDate.addDisabled();
       validateDate.createElementCaseEmpty();
       throw new Error('Por favor , preencha todos os campos')
     } else {
-      alert('Tudo ok!')
+      validateDate.removeDisabled();
+      validateDate.redirect();
     }
 
   },
@@ -95,12 +103,11 @@ const validateDate = {
       /* Limpar messagens de avisos */
       validateDate.clearElementsChilds();
 
-
       /* Validação dos campos  */
       validateDate.validateFields();
 
     } catch (err) {
-      alert(err.message)
+      alert(err.message)  
     }
     //console.log(event)
   },
@@ -125,6 +132,23 @@ const validateFieldsonFocus = {
   //object.addEventListener("focus", myScript);
   //object.addEventListener("blur", myScript);
 
+  validateFields() {
+    const {
+      name,
+      email,
+      password
+    } = validateDate.getValues();
+
+    if (name.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === "") {
+      validateDate.addDisabled();
+    } else {
+      validateDate.removeDisabled();
+    }
+
+  },
+
   activeFocos() {
     validateDate.clearElementsChilds();
   },
@@ -132,6 +156,8 @@ const validateFieldsonFocus = {
   activeblur() {
     validateDate.clearElementsChilds();
     validateDate.createElementCaseEmpty()
+
+    validateFieldsonFocus.validateFields();
   },
 
   exec() {

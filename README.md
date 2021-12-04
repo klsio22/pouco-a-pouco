@@ -35,7 +35,7 @@
 
 - [x] Função auto-executável
 
-- [ ] Função com nome
+- [x] Função com nome
 
 - [x] Função aninhada/local - declarar uma função dentro de outra
 
@@ -97,7 +97,7 @@
 
 - [x] Criar objetos a partir da definição de classes do ES6
 
-- [x] Usar herança prototipal nativa ou herança de classes do ES6
+- [ ] Usar herança prototipal nativa ou herança de classes do ES6
 
 ## Qualidade do código
 
