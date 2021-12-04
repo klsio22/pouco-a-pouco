@@ -4,12 +4,20 @@ const register = document.querySelector('.to-register')
 const selectorEnter = document.querySelector('.selector-enter')
 const selectorLogin = document.querySelector('.selector-login')
 
-function selector(){
+
+function authLogin() {
+  const auth = document.querySelector('.auth');
+  const login = document.querySelector('.login');
+}
+
+
+
+function selector() {
   selectorEnter.classList.toggle('touch-ripple-root')
   selectorLogin.classList.toggle('touch-ripple-root')
 }
 
-function auth() {
+function auth(authLogin) {
   const auth = document.querySelector('.auth');
   const login = document.querySelector('.login');
 
@@ -29,11 +37,10 @@ function auth() {
     selector()
 
   }
-  
+
 }
 
 function login() {
-
   const auth = document.querySelector('.auth');
   const login = document.querySelector('.login');
 
@@ -48,9 +55,7 @@ function login() {
 
     enter.disabled = false;
     register.disabled = true;
-    
     selector()
-    
   }
 
 
