@@ -17,6 +17,6 @@ html {
 
 body {
   background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
-  min-width:300px
+  font-family: 400 16px "Poppins", sans-serif;
+  min-width:350px
 }
