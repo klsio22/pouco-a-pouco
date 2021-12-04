@@ -1,0 +1,22 @@
+/* ========== Global ======= */
+:root {
+  --color-body-primary: #e5e5e5;
+  --color-primary: #fff;
+  --dark-blue: #363f5f;
+  --dark-green: #49aa26;
+  --light-green: #3dd705;
+  --red: #e92929;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 85.75%; /*15px*/
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  min-width:300px
+}
