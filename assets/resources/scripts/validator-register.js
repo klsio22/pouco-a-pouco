@@ -1,15 +1,21 @@
+import {
+  createElementSpanName as spanName,
+  createElementSpanEmail as spanEmail,
+  createElementSpanPassword as spanPassword,
+  clearSpanEmail,
+  clearSpanName,
+  clearSpanPassword
+} from "./create-requerids-register.js";
+
 const validateDate = {
+
   onSubmit: document.getElementById('toSend'),
-  register: document.querySelector('.register'),
-  inputEnter: document.getElementById('register'),
+  register: document.querySelector('.confirm-register'),
+  inputEnter: document.getElementById('confirm-register'),
 
   name: document.querySelector('input#name-login'),
   email: document.querySelector('input#email-login'),
   password: document.querySelector('input#password-login'),
-
-  requeridName: document.getElementById('requerid-name'),
-  requeridEmail: document.getElementById('requerid-email'),
-  requeridPassword: document.getElementById('requerid-password'),
 
   getValues() {
     return {
@@ -20,33 +26,6 @@ const validateDate = {
 
   },
 
-  createElementSpanName() {
-    let spanName = document.createElement('span');
-    spanName.innerHTML = 'Nome obrigatório';
-    validateDate.requeridName.appendChild(spanName);
-  },
-
-  createElementSpanEmail() {
-    const spanEmail = document.createElement('span');
-    spanEmail.innerHTML = 'Email obrigatório';
-    validateDate.requeridEmail.appendChild(spanEmail);
-
-  },
-
-  createElementSpanPassword() {
-    const spanPassword = document.createElement('span');
-    spanPassword.innerHTML = 'Senha obrigatória';
-    validateDate.requeridPassword.appendChild(spanPassword);
-  },
-
-
-  clearElementsChilds() {
-    this.requeridName.innerHTML = '';
-    this.requeridEmail.innerHTML = '';
-    this.requeridPassword.innerHTML = '';
-  },
-
-
   createElementCaseEmpty() {
     const {
       name,
@@ -55,13 +34,12 @@ const validateDate = {
     } = validateDate.getValues();
 
     if (name.trim() === "")
-      this.createElementSpanName()
-
+      spanName()
     if (email.trim() === "")
-      this.createElementSpanEmail()
+      spanEmail()
 
     if (password.trim() === "")
-      this.createElementSpanPassword()
+      spanPassword()
   },
 
   addDisabled() {
@@ -72,8 +50,8 @@ const validateDate = {
     validateDate.register.classList.remove('disabled');
   },
 
-  redirect(){
-    window.location.href="../PageTrasactions/index.html"
+  redirect() {
+    window.location.href = "../PageTrasactions/index.html"
   },
 
   validateFields() {
@@ -101,13 +79,14 @@ const validateDate = {
 
     try {
       /* Limpar messagens de avisos */
-      validateDate.clearElementsChilds();
-
+      clearSpanName()
+      clearSpanEmail()
+      clearSpanPassword()
       /* Validação dos campos  */
       validateDate.validateFields();
 
     } catch (err) {
-      alert(err.message)  
+      alert(err.message)
     }
     //console.log(event)
   },
@@ -127,10 +106,7 @@ const validateDate = {
 
 }
 
-const validateFieldsonFocus = {
-
-  //object.addEventListener("focus", myScript);
-  //object.addEventListener("blur", myScript);
+const validateFieldsOnFocusAndBlur = {
 
   validateFields() {
     const {
@@ -150,25 +126,30 @@ const validateFieldsonFocus = {
   },
 
   activeFocos() {
-    validateDate.clearElementsChilds();
+    clearSpanName()
+    clearSpanEmail()
+    clearSpanPassword()
   },
 
   activeblur() {
-    validateDate.clearElementsChilds();
+    clearSpanName()
+    clearSpanEmail()
+    clearSpanPassword()
+
     validateDate.createElementCaseEmpty()
 
-    validateFieldsonFocus.validateFields();
+    validateFieldsOnFocusAndBlur.validateFields();
   },
 
   exec() {
 
-    validateDate.name.addEventListener('focus', validateFieldsonFocus.activeFocos)
-    validateDate.email.addEventListener('focus', validateFieldsonFocus.activeFocos)
-    validateDate.password.addEventListener('focus', validateFieldsonFocus.activeFocos)
+    validateDate.name.addEventListener('focus', validateFieldsOnFocusAndBlur.activeFocos)
+    validateDate.email.addEventListener('focus', validateFieldsOnFocusAndBlur.activeFocos)
+    validateDate.password.addEventListener('focus', validateFieldsOnFocusAndBlur.activeFocos)
 
-    validateDate.name.addEventListener('blur', validateFieldsonFocus.activeblur)
-    validateDate.email.addEventListener('blur', validateFieldsonFocus.activeblur)
-    validateDate.password.addEventListener('blur', validateFieldsonFocus.activeblur)
+    validateDate.name.addEventListener('blur', validateFieldsOnFocusAndBlur.activeblur)
+    validateDate.email.addEventListener('blur', validateFieldsOnFocusAndBlur.activeblur)
+    validateDate.password.addEventListener('blur', validateFieldsOnFocusAndBlur.activeblur)
 
   }
 
@@ -176,5 +157,5 @@ const validateFieldsonFocus = {
 
 validateDate.submit();
 (function main() {
-  validateFieldsonFocus.exec();
+  validateFieldsOnFocusAndBlur.exec();
 })();

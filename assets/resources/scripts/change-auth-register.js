@@ -1,5 +1,5 @@
-const enter = document.querySelector('.to-enter')
-const register = document.querySelector('.to-register')
+const toEnter = document.querySelector('.to-enter')
+const toRegister = document.querySelector('.to-register')
 
 const selectorEnter = document.querySelector('.selector-enter')
 const selectorLogin = document.querySelector('.selector-login')
@@ -11,7 +11,7 @@ function selector() {
 
 function auth() {
   const auth = document.querySelector('.auth');
-  const login = document.querySelector('.login');
+  const login = document.querySelector('.register');
 
   let contains = auth.classList.contains('display-none');
 
@@ -19,12 +19,11 @@ function auth() {
     auth.classList.remove('display-none')
     auth.classList.add('display-inital')
 
-
     login.classList.remove('display-inital')
     login.classList.add('display-none')
 
-    enter.disabled = true;
-    register.disabled = false;
+    toEnter.disabled = true;
+    toRegister.disabled = false;
 
     selector()
 
@@ -32,9 +31,9 @@ function auth() {
 
 }
 
-function login() {
+function register() {
   const auth = document.querySelector('.auth');
-  const login = document.querySelector('.login');
+  const login = document.querySelector('.register');
 
   const contains = login.classList.contains('display-none');
 
@@ -45,13 +44,13 @@ function login() {
     auth.classList.remove('display-inital')
     auth.classList.add('display-none')
 
-    enter.disabled = false;
-    register.disabled = true;
+    toEnter.disabled = false;
+    toRegister.disabled = true;
     selector()
   }
 
 
 }
 
-enter.addEventListener('click', auth)
-register.addEventListener('click', login)
+toEnter.addEventListener('click', auth)
+toRegister.addEventListener('click', register)

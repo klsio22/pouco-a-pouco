@@ -119,7 +119,7 @@
 
 - [x] Validação de formulário com onsubmit usando os métodos tradicionais
 
-- [x] Validação de formulário com HTML5 API
+- [ ] Validação de formulário com HTML5 API
 
   - [ ] Customizar as mensagens nos balões de mensagem
 
@@ -133,7 +133,7 @@
 
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
 
-- [ ] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
+- [x] Acesso aos elementos de um formulário via hierarquia (caminho) de objetos, ou seja, array forms e elements
 
 ## jQuery
 
