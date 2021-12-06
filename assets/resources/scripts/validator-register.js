@@ -9,15 +9,26 @@ import {
   clearSpanPassword
 } from "./create-requerids-register.js";
 
+import{
+  checkedInput
+} from './checked-input.js'
+
+const onSubmit = document.getElementById('toSend')
+const register = document.querySelector('.confirm-register')
+const inputEnter = document.getElementById('confirm-register')
+
+const name = document.querySelector('input#name-login')
+const email = document.querySelector('input#email-login')
+const password = document.querySelector('input#password-login')
+
 const validateDate = {
 
-  onSubmit: document.getElementById('toSend'),
-  register: document.querySelector('.confirm-register'),
-  inputEnter: document.getElementById('confirm-register'),
-
-  name: document.querySelector('input#name-login'),
-  email: document.querySelector('input#email-login'),
-  password: document.querySelector('input#password-login'),
+  onSubmit,
+  register,
+  inputEnter,
+  name,
+  email,
+  password,
 
   getValues() {
     return {
@@ -54,7 +65,7 @@ const validateDate = {
 
   redirect() {
     alert('Cadrastro feito com sucesso')
-    window.location.href = "../../../views/transactions.html"
+    //window.location.href = "../../../views/transactions.html"
   },
 
   validateFields() {
@@ -87,7 +98,8 @@ const validateDate = {
       clearSpanPassword()
       /* Validação dos campos  */
       validateDate.validateFields();
-
+      /* Verificar se vai se manter conectado ou não */
+      checkedInput();
     } catch (err) {
       alert(err.message)
     }
@@ -160,7 +172,7 @@ const validateFieldsOnFocusAndBlur = {
 
     validateFieldsOnFocusAndBlur.updateFields()
 
-    if (name.trim() === "") {
+    if (name.trim() === '') {
       spanName();
       validateDate.addDisabled();
     } else {
@@ -175,8 +187,8 @@ const validateFieldsOnFocusAndBlur = {
     } = validateFieldsOnFocusAndBlur.getEmail();
 
     validateFieldsOnFocusAndBlur.updateFields()
-   
-    if (email.trim() === "") {
+
+    if (email.trim() === '') {
       spanEmail();
       validateDate.addDisabled();
     } else {
@@ -190,8 +202,8 @@ const validateFieldsOnFocusAndBlur = {
       password
     } = validateFieldsOnFocusAndBlur.getPassword();
 
-    validateFieldsOnFocusAndBlur.updateFields()     
-    if (password.trim() === "") {
+    validateFieldsOnFocusAndBlur.updateFields()
+    if (password.trim() === '') {
       spanPassword();
       validateDate.addDisabled();
     } else {
@@ -226,8 +238,8 @@ const validateFieldsOnFocusAndBlur = {
 
 }
 
-
 validateDate.submit();
+
 (function main() {
   validateFieldsOnFocusAndBlur.exec();
 })();

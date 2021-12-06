@@ -127,7 +127,7 @@
 
   - [ ] Usar expressões regulares
 
-- [ ] Ler e escrever em elementos input com a propriedade value
+- [x] Ler e escrever em elementos input com a propriedade value
 
 - [x] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
 
