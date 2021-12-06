@@ -1,3 +1,5 @@
+"use strict";
+
 const requeridEmail = document.querySelector('.requerid-email')
 const requeridPassword = document.querySelector('.requerid-password')
 

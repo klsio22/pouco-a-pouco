@@ -1,3 +1,5 @@
+"use strict";
+
 import {
   createElementSpanEmail,
   createElementSpanPassword,
@@ -47,12 +49,10 @@ document.forms[0].onsubmit = (event) => {
   }
 
   if (emailAuth.value == '') {
-    console.log('Email não pode ser está vazio')
     createElementSpanEmail();
   }
 
   if (passwordAuth.value == '') {
-    console.log('Password não pode ser está vazio')
     createElementSpanPassword();
   }
 

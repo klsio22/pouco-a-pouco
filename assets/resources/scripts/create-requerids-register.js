@@ -1,8 +1,10 @@
+"use strict";
+
 const requeridName = document.getElementById('requerid-name')
 const requeridEmail = document.getElementById('requerid-email')
 const requeridPassword = document.getElementById('requerid-password')
-
 export function createElementSpanName() {
+  
   let spanName = document.createElement('span');
   spanName.innerHTML = 'Nome obrigatório';
   requeridName.appendChild(spanName);

@@ -1,3 +1,5 @@
+"use strict";
+
 import {
   createElementSpanName as spanName,
   createElementSpanEmail as spanEmail,
@@ -19,9 +21,9 @@ const validateDate = {
 
   getValues() {
     return {
-      name: validateDate.name.value,
-      email: validateDate.email.value,
-      password: validateDate.password.value,
+      name: validateDate.name.value.trim(),
+      email: validateDate.email.value.trim(),
+      password: validateDate.password.value.trim(),
     }
 
   },
@@ -51,7 +53,8 @@ const validateDate = {
   },
 
   redirect() {
-    window.location.href = "../PageTrasactions/index.html"
+    alert('Cadrastro feito com sucesso')
+    window.location.href = "../../../views/transactions.html"
   },
 
   validateFields() {
@@ -94,7 +97,7 @@ const validateDate = {
   validateEnter(e) {
     let key = e.which || e.keyCode;
     if (key === 13) {
-      console.log('carregou enter o valor digitado foi: ' + this.value);
+      validateFields()
     }
   },
 
@@ -125,35 +128,104 @@ const validateFieldsOnFocusAndBlur = {
 
   },
 
-  activeFocos() {
-    clearSpanName()
-    clearSpanEmail()
-    clearSpanPassword()
+  updateFields() {
+    setInterval(() => {
+      validateFieldsOnFocusAndBlur.validateFields()
+    }, 100);
+
   },
 
-  activeblur() {
-    clearSpanName()
-    clearSpanEmail()
-    clearSpanPassword()
-
-    validateDate.createElementCaseEmpty()
-
-    validateFieldsOnFocusAndBlur.validateFields();
+  getName() {
+    return {
+      name: validateDate.name.value.trim()
+    }
   },
+
+  getEmail() {
+    return {
+      email: validateDate.email.value.trim()
+    }
+  },
+
+  getPassword() {
+    return {
+      password: validateDate.password.value.trim()
+    }
+  },
+
+  validateName() {
+    const {
+      name
+    } = validateFieldsOnFocusAndBlur.getName();
+
+    validateFieldsOnFocusAndBlur.updateFields()
+
+    if (name.trim() === "") {
+      spanName();
+      validateDate.addDisabled();
+    } else {
+      clearSpanName();
+      validateFieldsOnFocusAndBlur.validateFields()
+    }
+  },
+
+  validateEmail() {
+    const {
+      email
+    } = validateFieldsOnFocusAndBlur.getEmail();
+
+    validateFieldsOnFocusAndBlur.updateFields()
+   
+    if (email.trim() === "") {
+      spanEmail();
+      validateDate.addDisabled();
+    } else {
+      clearSpanEmail();
+      validateFieldsOnFocusAndBlur.validateFields()
+    }
+  },
+
+  validatePassword() {
+    const {
+      password
+    } = validateFieldsOnFocusAndBlur.getPassword();
+
+    validateFieldsOnFocusAndBlur.updateFields()     
+    if (password.trim() === "") {
+      spanPassword();
+      validateDate.addDisabled();
+    } else {
+      clearSpanPassword();
+      validateFieldsOnFocusAndBlur.validateFields()
+    }
+  },
+
 
   exec() {
 
-    validateDate.name.addEventListener('focus', validateFieldsOnFocusAndBlur.activeFocos)
-    validateDate.email.addEventListener('focus', validateFieldsOnFocusAndBlur.activeFocos)
-    validateDate.password.addEventListener('focus', validateFieldsOnFocusAndBlur.activeFocos)
+    validateDate.name.addEventListener('focus', () => {
+      clearSpanName()
+    })
+    validateDate.email.addEventListener('focus', () => {
+      clearSpanEmail()
+    })
+    validateDate.password.addEventListener('focus', () => {
+      clearSpanPassword()
+    })
 
-    validateDate.name.addEventListener('blur', validateFieldsOnFocusAndBlur.activeblur)
-    validateDate.email.addEventListener('blur', validateFieldsOnFocusAndBlur.activeblur)
-    validateDate.password.addEventListener('blur', validateFieldsOnFocusAndBlur.activeblur)
+    validateDate.name.addEventListener('blur',
+      validateFieldsOnFocusAndBlur.validateName)
+
+    validateDate.email.addEventListener('blur',
+      validateFieldsOnFocusAndBlur.validateEmail)
+
+    validateDate.password.addEventListener('blur',
+      validateFieldsOnFocusAndBlur.validatePassword)
 
   }
 
 }
+
 
 validateDate.submit();
 (function main() {

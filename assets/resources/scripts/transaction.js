@@ -1,3 +1,4 @@
+"use strict";
 const Modal = {
   modal: document.querySelector('.modal-overlay'),
 

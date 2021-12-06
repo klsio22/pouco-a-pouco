@@ -1,3 +1,5 @@
+"use strict";
+
 const toEnter = document.querySelector('.to-enter')
 const toRegister = document.querySelector('.to-register')
 
@@ -10,6 +12,7 @@ function selector() {
 }
 
 function auth() {
+ 
   const auth = document.querySelector('.auth');
   const login = document.querySelector('.register');
 
