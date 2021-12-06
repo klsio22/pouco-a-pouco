@@ -66,7 +66,7 @@ const validateDate = {
 
   redirect() {
     alert('Cadrastro feito com sucesso')
-    //window.location.href = "../../../views/transactions.html"
+    window.location.href = "../../../views/transactions.html"
   },
 
   validateFields() {
@@ -207,9 +207,10 @@ const validateFieldsOnFocusAndBlur = {
       password
     } = validateFieldsOnFocusAndBlur.getPassword();
 
-    let reg = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    let reg = /^[a-zA-Z0-9!@#$%^&*]{6,32}$/;
 
     validateFieldsOnFocusAndBlur.updateFields()
+
     if (password === '') {
       spanPassword();
       validateDate.addDisabled();
@@ -221,6 +222,7 @@ const validateFieldsOnFocusAndBlur = {
       validateDate.removeDisabled();
       console.log(password)
     }
+
   },
 
 
@@ -230,10 +232,12 @@ const validateFieldsOnFocusAndBlur = {
       validateFieldsOnFocusAndBlur.updateFields()
       clearSpanName()
     })
+
     validateDate.email.addEventListener('focus', () => {
       validateFieldsOnFocusAndBlur.updateFields()
       clearSpanEmail()
     })
+
     validateDate.password.addEventListener('focus', () => {
       validateFieldsOnFocusAndBlur.updateFields()
       clearSpanPassword()
