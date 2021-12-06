@@ -66,7 +66,7 @@ const validateDate = {
 
   redirect() {
     alert('Cadrastro feito com sucesso')
-    window.location.href = "../../../views/transactions.html"
+    window.location.href = "../../views/transactions.html"
   },
 
   validateFields() {
