@@ -23,7 +23,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="../assets/resources/styles/main.css" />
-  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/authLogin.css">
+  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/auth.css">
   <link rel="stylesheet" href="../assets/resources/styles/auth-Login/desktop.css">
   <link rel="stylesheet" href="../assets/resources/styles/auth-Login/mobile.css">
 
@@ -83,9 +83,11 @@
 
         </header>
 
-        <div class="authLogin row">
+        <div class="authRegister row">
 
           <div class="blocks">
+
+            <!-- Auth -->
 
             <div class="auth display-initial">
 
@@ -112,36 +114,39 @@
                 <p class="line">OU</p>
               </div>
 
-              <form class="">
+              <form>
                 <div class="row">
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="email-auth" placeholder="Seu email" type="email" class="validateDate">
+                      <input id="email-auth" placeholder="Seu email" type="email" class="validateDate" required>
                       <label for="email-auth"></label>
+                      <div class="requerid-email alert"></div>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="password-auth" placeholder="Senha" type="password" class="validateDate">
+                      <input id="password-auth" placeholder="Senha" type="password" class="validateDate" requerid>
                       <label for="password-auth"></label>
+                      <div class="requerid-password alert"></div>
                     </div>
                   </div>
 
                   <div class="checkboxe center">
                     <p>
                       <label>
-                        <input type="checkbox" class="filled-in" />
+                        <input type="checkbox" name="connected" class="filled-in" />
                         <span class="black-text">Mantenha-me conectado</span>
                       </label>
                     </p>
                   </div>
 
                   <div class="enter-page center">
-                    <div class="waves-effect waves-light light-blue accent-4 btn enter-btn ">
+                    <button id="" type="submit" value="Submit"
+                    class="waves-effect waves-light light-blue accent-4 btn enter-btn confirm-entry">
                       <span class="enter-span-text text">Entrar</span>
-                    </div>
+                    </button>
                   </div>
 
                   <div class="center ">
@@ -153,7 +158,9 @@
 
             </div>
 
-            <div class="login display-none ">
+            <!-- Register -->
+
+            <div class="register display-none ">
 
               <div class="">
 
@@ -186,7 +193,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="name-login" placeholder="Nome" name="name" type="text" class="validate" value>
+                    <input id="name-login" placeholder="Nome" name="name" type="text" class="validate" requerid>
                     <label for="name-login"></label>
                     <div id="requerid-name" class="alert"></div>
                   </div>
@@ -194,7 +201,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email-login" placeholder="Email" type="email" name="email" class="validate">
+                    <input id="email-login" placeholder="Email" type="email" name="email" class="validate" requerid>
                     <label for="email-login"></label>
                     <div id="requerid-email" class="alert"></div>
                   </div>
@@ -202,7 +209,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password-login" placeholder="Senha" name="password" type="password" class="validate">
+                    <input id="password-login" placeholder="Senha" name="password" type="password" class="validate" requerid>
                     <label for="password-login"></label>
                     <div id="requerid-password" class="alert"></div>
                   </div>
@@ -211,7 +218,7 @@
                 <div class="checkboxe center">
                   <p>
                     <label>
-                      <input type="checkbox" class="filled-in" />
+                      <input type="checkbox" name='connected' class="filled-in" />
                       <span class="black-text">Mantenha-me conectado</span>
                     </label>
 
@@ -226,14 +233,14 @@
                     </a>e
                     <a href="">
                       Política de Privacidade
-                    </a>do Mobills.
+                    </a>do Pouco a Pouco.
                   </p>
                 </div>
 
                 <div class="register-page center">
-                  <button id="register" type="submit" value="Submit"
-                    class="waves-effect waves-light light-blue accent-4 btn register">
-
+                  <button id="confirm-register" type="submit" value="Submit"
+                    class="waves-effect waves-light light-blue accent-4 btn confirm-register">
+                  
                     <span class="enter-span-text text">
                       Concordar e cadastrar
                     </span>
@@ -253,9 +260,17 @@
     </div>
   </main>
 
-  <script src="../assets/resources/scripts/validator-form.js"></script>
+  <script type="module" src="../assets/resources/scripts/create-requerids-auth.js"></script>
 
-  <script src="../assets/resources/scripts/change-auth-login.js"></script>
+  <script type="module" src="../assets/resources/scripts/create-requerids-register.js"></script>
+
+  <script type="module" src="../assets/resources/scripts/change-auth-register.js"></script>
+  
+  <script type="module" src="../assets/resources/scripts/validator-register.js"></script>
+
+  <script type="module" src="../assets/resources/scripts/validator-auth.js"></script>
+
+  <script src="../assets/resources/scripts/change-auth-register.js"></script>
 
 </body>
 
