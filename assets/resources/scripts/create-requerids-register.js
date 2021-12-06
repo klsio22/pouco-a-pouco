@@ -3,34 +3,49 @@
 const requeridName = document.getElementById('requerid-name')
 const requeridEmail = document.getElementById('requerid-email')
 const requeridPassword = document.getElementById('requerid-password')
-export function createElementSpanName() {
-  
+
+function createElementSpanName() {
   let spanName = document.createElement('span');
   spanName.innerHTML = 'Nome obrigatório';
   requeridName.appendChild(spanName);
 }
 
-export let createElementSpanEmail = function() {
+const createElementSpanEmail = function () {
   let spanEmail = document.createElement('span');
   spanEmail.innerHTML = 'Email obrigatório';
   requeridEmail.appendChild(spanEmail);
-
 }
 
-export let createElementSpanPassword = () => {
+const createElementSpanEmailValid = function () {
+  let spanEmail = document.createElement('span');
+  spanEmail.innerHTML = 'Email Inválido';
+  requeridEmail.appendChild(spanEmail);
+}
+
+const createElementSpanPassword = () => {
   let spanPassword = document.createElement('span');
   spanPassword.innerHTML = 'Senha obrigatória';
   requeridPassword.appendChild(spanPassword);
 }
 
-export let clearSpanName = () => {
+const clearSpanName = () => {
   requeridName.innerHTML = '';
 }
 
-export let clearSpanEmail = () => {
+const clearSpanEmail = () => {
   requeridEmail.innerHTML = '';
 }
 
-export let clearSpanPassword = () => {
+const clearSpanPassword = () => {
   requeridPassword.innerHTML = '';
+}
+
+export {
+  createElementSpanName,
+  createElementSpanEmail,
+  createElementSpanPassword,
+  clearSpanName,
+  clearSpanEmail,
+  clearSpanPassword,
+  createElementSpanEmailValid
 }

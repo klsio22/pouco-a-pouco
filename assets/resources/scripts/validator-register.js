@@ -3,13 +3,14 @@
 import {
   createElementSpanName as spanName,
   createElementSpanEmail as spanEmail,
+  createElementSpanEmailValid as spanEmailValid,
   createElementSpanPassword as spanPassword,
   clearSpanEmail,
   clearSpanName,
   clearSpanPassword
 } from "./create-requerids-register.js";
 
-import{
+import {
   checkedInput
 } from './checked-input.js'
 
@@ -134,16 +135,13 @@ const validateFieldsOnFocusAndBlur = {
       email.trim() === "" ||
       password.trim() === "") {
       validateDate.addDisabled();
-    } else {
-      validateDate.removeDisabled();
     }
-
   },
 
   updateFields() {
     setInterval(() => {
       validateFieldsOnFocusAndBlur.validateFields()
-    }, 100);
+    }, 10);
 
   },
 
@@ -172,13 +170,18 @@ const validateFieldsOnFocusAndBlur = {
 
     validateFieldsOnFocusAndBlur.updateFields()
 
-    if (name.trim() === '') {
+    if (name == '') {
       spanName();
       validateDate.addDisabled();
     } else {
       clearSpanName();
-      validateFieldsOnFocusAndBlur.validateFields()
+      validateDate.removeDisabled();
     }
+  },
+
+  emailValid(email) {
+    let reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return reg.test(email) // retorna true
   },
 
   validateEmail() {
@@ -188,12 +191,14 @@ const validateFieldsOnFocusAndBlur = {
 
     validateFieldsOnFocusAndBlur.updateFields()
 
-    if (email.trim() === '') {
+    if (email === '') {
       spanEmail();
       validateDate.addDisabled();
+    } else if (!validateFieldsOnFocusAndBlur.emailValid(email)) {
+      spanEmailValid();
     } else {
       clearSpanEmail();
-      validateFieldsOnFocusAndBlur.validateFields()
+      validateDate.removeDisabled();
     }
   },
 
@@ -202,13 +207,19 @@ const validateFieldsOnFocusAndBlur = {
       password
     } = validateFieldsOnFocusAndBlur.getPassword();
 
+    let reg = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+
     validateFieldsOnFocusAndBlur.updateFields()
-    if (password.trim() === '') {
+    if (password === '') {
       spanPassword();
       validateDate.addDisabled();
+    } else if (!reg.test(password)) { //false
+      alert('A senha deve conter pelo menos um número e um caractere especial')
+      spanPassword();
     } else {
       clearSpanPassword();
-      validateFieldsOnFocusAndBlur.validateFields()
+      validateDate.removeDisabled();
+      console.log(password)
     }
   },
 
@@ -216,12 +227,15 @@ const validateFieldsOnFocusAndBlur = {
   exec() {
 
     validateDate.name.addEventListener('focus', () => {
+      validateFieldsOnFocusAndBlur.updateFields()
       clearSpanName()
     })
     validateDate.email.addEventListener('focus', () => {
+      validateFieldsOnFocusAndBlur.updateFields()
       clearSpanEmail()
     })
     validateDate.password.addEventListener('focus', () => {
+      validateFieldsOnFocusAndBlur.updateFields()
       clearSpanPassword()
     })
 
