@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../assets/resources/styles/auth-Login/mobile.css">
 
   <!-- jquery -->
-  <!--  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
 
 
   <title>Pouco a Pouco</title>
@@ -91,44 +91,48 @@
 
             <div class="auth display-initial">
 
-              <div class="social-btns">
-                <div class="btns-socials">
-                  <div class="google-span">
-                    <div class="waves-effect waves-light btn google-btn" id="googleAuthAnchor">
-                      <img src="../public/images/icon-google-logo.svg" alt="">
-                      <span class="google-span-text text">Google</span>
+              <div class="row">
+                <div class="social-btns">
+                  <div class="btns-socials">
+                    <div class="google-span">
+                      <div class="waves-effect waves-light btn google-btn" id="googleAuthAnchor">
+                        <img src="../public/images/icon-google-logo.svg" alt="">
+                        <span class="google-span-text text">Google</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btns-socials">
+                    <div class="facebook-span">
+                      <div class="waves-effect waves-light btn indigo darken-4 facebook-btn">
+                        <img src="../public/images/icon-facebook.svg" alt="mini icone do facebook" class="">
+                        <span class="facebook-span-text text">Facebook</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="btns-socials">
-                  <div class="facebook-span">
-                    <div class="waves-effect waves-light btn indigo darken-4 facebook-btn">
-                      <img src="../public/images/icon-facebook.svg" alt="mini icone do facebook" class="">
-                      <span class="facebook-span-text text">Facebook</span>
-                    </div>
-                  </div>
+
+                <div class="separator-auth">
+                  <p class="line">OU</p>
                 </div>
               </div>
 
-              <div class="separator-auth">
-                <p class="line">OU</p>
-              </div>
+               <!-- ======== Form Entrar ========== -->
 
               <form>
-                <div class="row">
+                <div class="">
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="email-auth" placeholder="Seu email" type="email" class="validateDate" required>
-                      <label for="email-auth"></label>
+                      <input id="email-auth" placeholder="Thiago@gmail.com" type="email" class="validate validateDate" >
+                      <label for="email-auth">Email</label>
                       <div class="requerid-email alert"></div>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="password-auth" placeholder="Senha" type="password" class="validateDate" requerid>
-                      <label for="password-auth"></label>
+                      <input id="password-auth" placeholder="NU2kcTXU" type="password" class="validate validateDate" >
+                      <label for="password-auth">Senha</label>
                       <div class="requerid-password alert"></div>
                     </div>
                   </div>
@@ -144,7 +148,7 @@
 
                   <div class="enter-page center">
                     <button id="" type="submit" value="Submit"
-                    class="waves-effect waves-light light-blue accent-4 btn enter-btn confirm-entry">
+                      class="waves-effect waves-light light-blue accent-4 btn enter-btn confirm-entry">
                       <span class="enter-span-text text">Entrar</span>
                     </button>
                   </div>
@@ -162,7 +166,7 @@
 
             <div class="register display-none ">
 
-              <div class="">
+              <div class="row">
 
                 <div class="social-btns">
                   <div class="btns-socials">
@@ -193,24 +197,25 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="name-login" placeholder="Nome" name="name" type="text" class="validate" requerid>
-                    <label for="name-login"></label>
+                    <input id="name-login" placeholder="Thiago Mendes" name="name" type="text" class="validate">
+                    <label for="name-login">Nome</label>
                     <div id="requerid-name" class="alert"></div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email-login" placeholder="Email" type="email" name="email" class="validate" requerid>
-                    <label for="email-login"></label>
+                    <input id="email-login" placeholder="Thiago@gmail.com" type="email" name="email" class="validate">
+                    <label for="email-login">Email</label>
                     <div id="requerid-email" class="alert"></div>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password-login" placeholder="Senha" name="password" type="password" class="validate" requerid>
-                    <label for="password-login"></label>
+                    <input id="password-login" placeholder="NU2kcTXU" name="password" type="password" class="validate"
+                      requerid>
+                    <label for="password-login">Senha</label>
                     <div id="requerid-password" class="alert"></div>
                   </div>
                 </div>
@@ -240,7 +245,7 @@
                 <div class="register-page center">
                   <button id="confirm-register" type="submit" value="Submit"
                     class="waves-effect waves-light light-blue accent-4 btn confirm-register">
-                  
+
                     <span class="enter-span-text text">
                       Concordar e cadastrar
                     </span>
@@ -260,17 +265,21 @@
     </div>
   </main>
 
+  <script src="../assets/libraries/materialize/js/materialize.js"></script>
+  <script src="../assets/resources/scripts/common.js"></script>
+
   <script type="module" src="../assets/resources/scripts/create-requerids-auth.js"></script>
 
   <script type="module" src="../assets/resources/scripts/create-requerids-register.js"></script>
 
   <script type="module" src="../assets/resources/scripts/change-auth-register.js"></script>
-  
+
   <script type="module" src="../assets/resources/scripts/validator-register.js"></script>
 
   <script type="module" src="../assets/resources/scripts/validator-auth.js"></script>
 
   <script src="../assets/resources/scripts/change-auth-register.js"></script>
+
 
 </body>
 

@@ -225,7 +225,6 @@ const validateFieldsOnFocusAndBlur = {
 
   },
 
-
   exec() {
 
     validateDate.name.addEventListener('focus', () => {
