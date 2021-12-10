@@ -9,12 +9,12 @@
   <script>
     var base = document.createElement("base");
     base.href =
-      "//" + document.location.host + "/" + location.href.split("/")[3] + "/";
+      "" + document.location.host + "/" + location.href.split("/")[3] + "/";
     document.getElementsByTagName("head")[0].appendChild(base);
   </script>
 
   <!-- Icon site -->
-  <link rel="icon" href="public/images/favicon.ico" />
+  <link rel="icon" href="/public/images/favicon.ico" />
 
   <!-- Reset Page -->
   <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
@@ -76,9 +76,9 @@
 
     <ul class="sidenav" id="mobile-demo">
       <li><a href="home.html">Início</a></li>
-      <li><a href="about.html">Sobre</a></li>
-      <li><a href="plans.html">Planos</a></li>
-      <li><a href="resources.html">Recursos</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Planos</a></li>
+      <li><a href="#">Recursos</a></li>
       <li><a href="contact.html">Contato</a></li>
     </ul>
   </header>
