@@ -6,8 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <script>
+    var base = document.createElement("base");
+    base.href =
+      "//" + document.location.host + "/" + location.href.split("/")[3] + "/";
+    document.getElementsByTagName("head")[0].appendChild(base);
+  </script>
+
   <!-- Icon site -->
-  <link rel="icon" href="/public/images/favicon.ico" />
+  <link rel="icon" href="public/images/favicon.ico" />
 
   <!-- Reset Page -->
   <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
@@ -32,8 +39,6 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-  <base href="/pouco-a-pouco">
-
   <title>Pouco a Pouco</title>
 </head>
 
@@ -52,11 +57,11 @@
           </a>
 
           <ul class="hide-on-med-and-down" id="menu">
-            <li><a class="blue-text" href="home.html">Início </a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="plans.html">Planos</a></li>
-            <li><a href="resources.html">Recursos</a></li>
-            <li><a href="contact.html">Contato</a></li>
+            <li><a class="/blue-text" href="home.html">Início </a></li>
+            <li><a href="/about.html">Sobre</a></li>
+            <li><a href="/plans.html">Planos</a></li>
+            <li><a href="/resources.html">Recursos</a></li>
+            <li><a href="/contact.html">Contato</a></li>
           </ul>
         </div>
 
@@ -248,8 +253,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<!--   <script src="../assets/resources/scripts/constants.js"></script>
- -->
+
   <script src="/assets/libraries/jquery/sidenav.js"></script>
   <script src="/assets/resources/scripts/notification.js"></script>
 </body>

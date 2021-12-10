@@ -66,8 +66,7 @@ const validateDate = {
 
   redirect() {
     alert('Cadrastro feito com sucesso')
-    //window.location.href = '../../views/transactions.html'//Local Host
-    window.location.href = '/views/transactions.html' //gitPage
+    window.location.href = "../../../views/transactions.html"
   },
 
   validateFields() {
@@ -225,7 +224,6 @@ const validateFieldsOnFocusAndBlur = {
     }
 
   },
-
 
   exec() {
 

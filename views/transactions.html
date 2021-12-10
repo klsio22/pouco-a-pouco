@@ -6,9 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+<!--   <script src="/assets/resources/scripts/constants.js"></script>
+ -->
+  <script>
+    let base = document.createElement("base");
+    base.href =
+      "//" + document.location.host + "/" + location.href.split("/")[3] + "/";
+    document.getElementsByTagName("head")[0].appendChild(base);
+  </script>
+
   <!-- Icon site -->
 
-  <link rel="icon" href="/public/images/favicon.ico">
+  <link rel="icon" href="public/images/favicon.ico">
 
   <!-- Reset Page -->
   <link rel="stylesheet" href="/assets/resources/styles/reset.css">
@@ -31,7 +41,6 @@
   <link rel="stylesheet" href="/assets/resources/styles/transactions/classes_and_id.css">
   <link rel="stylesheet" href="/assets/resources/styles/transactions/desktop.css">
 
-  <base href="/pouco-a-pouco">
 
   <title>Pouco a Pouco - Transações</title>
 </head>
@@ -141,7 +150,7 @@
       </div>
 
       <div id="btn-back" class="btn-back">
-        <a href="../index.html" class="waves-effect waves-light light-blue accent-4 btn back-home">
+        <a href="/index.html" class="waves-effect waves-light light-blue accent-4 btn back-home">
           voltar
         </a>
       </div>
@@ -156,10 +165,10 @@
         <div class="col l3 s12">
           <h6 class="blue-text">Social</h6>
           <div class="images">
-            <img src="../public/images/social-media/twitter.svg" alt="icone-do-twitter ">
-            <img src="../public/images/social-media/instagram.svg" alt="icone-do-instagram">
-            <img src="../public/images/social-media/facebook.svg" alt="icone-do-facebook">
-            <img src="../public/images/social-media/telegram.svg" alt="icone-do-telegram">
+            <img src="/public/images/social-media/twitter.svg" alt="icone-do-twitter ">
+            <img src="/public/images/social-media/instagram.svg" alt="icone-do-instagram">
+            <img src="/public/images/social-media/facebook.svg" alt="icone-do-facebook">
+            <img src="/public/images/social-media/telegram.svg" alt="icone-do-telegram">
           </div>
         </div>
 

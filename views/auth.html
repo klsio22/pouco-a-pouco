@@ -6,10 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+  <script>
+    let base = document.createElement("base");
+    base.href =
+      "//" + document.location.host + "/" + location.href.split("/")[3] + "/";
+    document.getElementsByTagName("head")[0].appendChild(base);
+  </script>
   <!-- Icon site -->
-  <link rel="icon" href="../public/images/favicon.ico" />
+  <link rel="icon" href="/public/images/favicon.ico" />
   <!-- Reset Page -->
-  <link rel="stylesheet" href="../assets/resources/styles/reset.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,8 +38,6 @@
   <!--  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script> -->
 
-  <base href="/pouco-a-pouco">
-
   <title>Pouco a Pouco</title>
 </head>
 
@@ -52,7 +57,7 @@
 
         <h5>Hora de transformar suas finanças.</h5>
         <div>
-          <img class="motivation-img" src="../public/images/router.png" alt="">
+          <img class="motivation-img" src="/public/images/router.png" alt="">
         </div>
 
         <p>
@@ -120,7 +125,7 @@
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="email-auth" placeholder="Seu email" type="email" class="validateDate" required>
+                      <input id="email-auth" placeholder="Seu email" type="email"  class="validateDate" required pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/">
                       <label for="email-auth"></label>
                       <div class="requerid-email alert"></div>
                     </div>
@@ -128,7 +133,7 @@
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="password-auth" placeholder="Senha" type="password" class="validateDate" requerid>
+                      <input id="password-auth" placeholder="Senha" type="password" class="validateDate" required>
                       <label for="password-auth"></label>
                       <div class="requerid-password alert"></div>
                     </div>
@@ -194,7 +199,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="name-login" placeholder="Nome" name="name" type="text" class="validate" requerid>
+                    <input id="name-login" placeholder="Nome" name="name" type="text" class="validate" required>
                     <label for="name-login"></label>
                     <div id="requerid-name" class="alert"></div>
                   </div>
@@ -202,7 +207,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email-login" placeholder="Email" type="email" name="email" class="validate" requerid>
+                    <input id="email-login" placeholder="Email" type="email" name="email" class="validate" required pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/">
                     <label for="email-login"></label>
                     <div id="requerid-email" class="alert"></div>
                   </div>
@@ -210,7 +215,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password-login" placeholder="Senha" name="password" type="password" class="validate" requerid>
+                    <input id="password-login" placeholder="Senha" name="password" type="password" class="validate" required>
                     <label for="password-login"></label>
                     <div id="requerid-password" class="alert"></div>
                   </div>

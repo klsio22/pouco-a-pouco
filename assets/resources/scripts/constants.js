@@ -1,6 +1,3 @@
-const ROUTES_PATH = IS_LOCAL ? '' : '/pouco-a-pouco';
-const IS_LOCAL = true;
-
-export{
-  ROUTES_PATH
-}
+var base = document.createElement('base')
+base.href = '//' + document.location + '/' + location.href.split('/')[3] + '/';
+document.getElementsByTagName('head')[0].appendChild(base);
