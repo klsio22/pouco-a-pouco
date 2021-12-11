@@ -54,13 +54,17 @@
 }
 
 /* ========== Links  & button ======= */
+
+
 .button.new {
+  cursor: pointer;
   display: inline-block;
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
 }
 
 .button.cancel {
+  cursor: pointer;
   color: var(--red);
   border: 2px var(--red) solid;
   border-radius: 0.25rem;
