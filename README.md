@@ -106,7 +106,7 @@
 - [x] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
 
 - [x] Usar strict mode
-  - [x] Usar Module Pattern
+  - [ ] Usar Module Pattern
 
 - [x] Usar pasta assets e subpastas resources e libraries para organizar o código
 

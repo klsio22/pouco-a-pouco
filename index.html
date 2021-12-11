@@ -1,261 +1,295 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      let base = document.createElement("base");
+      base.href =
+        "//" + document.location.host + "/"  + location.href.split("/")[3] + "/" ;
+      document.getElementsByTagName("head")[0].appendChild(base);
+    </script>
 
-  <script>
-    var base = document.createElement("base");
-    base.href =
-      "" + document.location.host + "/" + location.href.split("/")[3] + "/";
-    document.getElementsByTagName("head")[0].appendChild(base);
-  </script>
+    <!-- Icon site -->
+    <link rel="icon" href="public/images/favicon.ico" />
 
-  <!-- Icon site -->
-  <link rel="icon" href="/public/images/favicon.ico" />
+    <!-- Reset Page -->
+    <link rel="stylesheet" href="assets/resources/styles/reset.css" />
 
-  <!-- Reset Page -->
-  <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
-    rel="stylesheet" />
+    <!-- Materialize -->
 
-  <!-- Materialize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- Styles -->
 
-  <!-- Styles -->
+    <link rel="stylesheet" href="assets/resources/styles/main.css" />
+    <link rel="stylesheet" href="assets/resources/styles/home/home.css" />
+    <link rel="stylesheet" href="assets/resources/styles/home/desktop.css" />
+    <link rel="stylesheet" href="assets/resources/styles/home/mobile.css" />
 
-  <link rel="stylesheet" href="/assets/resources/styles/main.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/home/home.css">
-  <link rel="stylesheet" href="/assets/resources/styles/home/desktop.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/home/mobile.css" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Pouco a Pouco</title>
+  </head>
 
-  <title>Pouco a Pouco</title>
-</head>
+  <body>
+    <header>
+      <nav class="">
+        <div class="nav-wrapper container">
+          <div class="nav-menu">
+            <a href="#!" id="brand-logo" class="brand-logo">
+              <img
+                class="logo"
+                id="logo"
+                src="public/images/logo-and-icon.svg"
+                alt="logo"
+              />
+              <img
+                class="logo-mobile"
+                id="logo-mobile"
+                src="public/images/icon-logo.svg"
+                alt="icon logo mobile"
+              />
+            </a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons">
+                <img src="public/images/menu.png" alt="" />
+              </i>
+            </a>
 
-<body>
-  <header>
-    <nav class="">
-      <div class="nav-wrapper container">
-        <div class="nav-menu">
-          <a href="#!" id="brand-logo" class="brand-logo">
-            <img class="logo" id="logo" src="/public/images/logo-and-icon.svg" alt="logo" />
-            <img class="logo-mobile" id="logo-mobile" src="/public/images/icon-logo.svg" alt="icon logo mobile" />
-          </a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">
-              <img src="/public/images/menu.png" alt="" />
-            </i>
-          </a>
-
-          <ul class="hide-on-med-and-down" id="menu">
-            <li><a class="/blue-text" href="home.html">Início </a></li>
-            <li><a href="/about.html">Sobre</a></li>
-            <li><a href="/plans.html">Planos</a></li>
-            <li><a href="/resources.html">Recursos</a></li>
-            <li><a href="/contact.html">Contato</a></li>
-          </ul>
-        </div>
-
-        <div class="bottom-register">
-          <a class="login" id="login" href="/views/auth.html">Entrar</a>
-          <a href="/views/auth.html" id="registration" class="waves-effect waves-light light-blue accent-4 btn">
-            Começar Grátis
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="home.html">Início</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Planos</a></li>
-      <li><a href="#">Recursos</a></li>
-      <li><a href="contact.html">Contato</a></li>
-    </ul>
-  </header>
-
-  <main id="container" class="container">
-
-    <div class="row">
-
-      <div class="content col xl6 l6 m12 s12  ">
-        <h5 class="black-text title"> O ponto de partida para você controlar o seu dinheiro</h5>
-        <p>O Mobills permite que você faça seu controle financeiro pessoal e familiar de forma completa, eficiente e
-          fácil.
-        </p>
-
-        <div class="content-wrapper">
-          <div class="row">
-            <div class="col figure">
-              <img src="/public/images/increase.png" alt="">
-            </div>
-
-            <div class="">
-              <h5 class="black-text">Planeje suas finanças</h5>
-              <p>Faça orçamentos e mantenha seus gastos sob controle.</p>
-            </div>
-
+            <ul class="hide-on-med-and-down" id="menu">
+              <li><a class="blue-text" href="home.html">Início </a></li>
+              <li><a href="about.html">Sobre</a></li>
+              <li><a href="plans.html">Planos</a></li>
+              <li><a href="resources.html">Recursos</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
           </div>
 
-          <div class="row">
-            <div class="col figure">
-              <img src="/public/images/bell.png" alt="">
-            </div>
-
-            <div class="">
-              <h5 class="black-text">Receba alertas mensais</h5>
-              <p>Te ajudamos a entender se você está no caminho certo.</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col figure">
-              <img src="/public/images/target.png" alt="">
-            </div>
-
-            <div class="">
-              <h5 class="black-text">Acompanhe relatórios</h5>
-              <p>Confira análises mensais sobre sua vida financeira.</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col figure">
-              <img src="/public/images/notes.png" alt="">
-            </div>
-
-            <div class="">
-              <h5 class="black-text">Crie seus objetivos</h5>
-              <p>Crie metas para juntar dinheiro e alcançar seus sonhos.</p>
-            </div>
+          <div class="bottom-register">
+            <a class="login" id="login" href="views/auth.html">Entrar</a>
+            <a
+              href="views/auth.html"
+              id="registration"
+              class="waves-effect waves-light light-blue accent-4 btn"
+            >
+              Começar Grátis
+            </a>
           </div>
         </div>
-      </div>
+      </nav>
 
-      <div class="col xl6 l6 girl">
-        <img src="/public/images/girl.png" alt="menina" width="480">
-      </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="home.html">Início</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="plans.html">Planos</a></li>
+        <li><a href="resources.html">Recursos</a></li>
+        <li><a href="contact.html">Contato</a></li>
+      </ul>
+    </header>
 
-    </div>
-
-  </main>
-
-  <footer id="page-footer" class="page-footer">
-    <div class="container">
+    <main id="container" class="container">
       <div class="row">
-        <div class="col l3 s12">
-          <h6 class="blue-text">Social</h6>
-          <div class="images">
-            <img src="/public/images/social-media/twitter.svg" alt="icone-do-twitter ">
-            <img src="/public/images/social-media/instagram.svg" alt="icone-do-instagram">
-            <img src="/public/images/social-media/facebook.svg" alt="icone-do-facebook">
-            <img src="/public/images/social-media/telegram.svg" alt="icone-do-telegram">
+        <div class="content col xl6 l6 m12 s12">
+          <h5 class="black-text title">
+            O ponto de partida para você controlar o seu dinheiro
+          </h5>
+          <p>
+            O Mobills permite que você faça seu controle financeiro pessoal e
+            familiar de forma completa, eficiente e fácil.
+          </p>
+
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col figure">
+                <img src="public/images/increase.png" alt="" />
+              </div>
+
+              <div class="">
+                <h5 class="black-text">Planeje suas finanças</h5>
+                <p>Faça orçamentos e mantenha seus gastos sob controle.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col figure">
+                <img src="public/images/bell.png" alt="" />
+              </div>
+
+              <div class="">
+                <h5 class="black-text">Receba alertas mensais</h5>
+                <p>Te ajudamos a entender se você está no caminho certo.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col figure">
+                <img src="public/images/target.png" alt="" />
+              </div>
+
+              <div class="">
+                <h5 class="black-text">Acompanhe relatórios</h5>
+                <p>Confira análises mensais sobre sua vida financeira.</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col figure">
+                <img src="public/images/notes.png" alt="" />
+              </div>
+
+              <div class="">
+                <h5 class="black-text">Crie seus objetivos</h5>
+                <p>Crie metas para juntar dinheiro e alcançar seus sonhos.</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col l2 offset-l1 s12 black-text">
-          <h6 class="blue-text">Pouca a pouco</h6>
-          <ul class="">
-            <li class="active">
-              <a class="black-text text-lighten-3" href="#">Planos</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">Recursos</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">
-                Central de Ajuda
-              </a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">
-                Materiais gratuitos
-              </a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">Calculadoras</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">Glossário</a>
-            </li>
-          </ul>
+        <div class="col xl6 l6 girl">
+          <img src="public/images/girl.png" alt="menina" width="480" />
         </div>
-
-        <div class="col l2 offset-l1 s12 black-text">
-          <h6 class="blue-text">Guias</h6>
-          <ul class="">
-            <li class="active">
-              <a class="black-text text-lighten-3" href="#">Como economizar</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">Recursos</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">
-                Planejamento financeiro
-              </a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">
-                Finanças pessoais
-              </a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">Educação financeira</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#">Melhores cartões de crédito</a>
-            </li>
-
-            <li>
-              <a class="black-text text-lighten-3" href="#">Planilha de controle financeiro</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col l2 offset-l1 s12 black-text">
-          <h6 class="blue-text">Empresas</h6>
-          <ul class="">
-            <li class="active">
-              <a class="black-text text-lighten-3" href="#!">Equipe</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#!">Carreiras</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#!">Imprensa</a>
-            </li>
-            <li>
-              <a class="black-text text-lighten-3" href="#!">
-                Contato
-              </a>
-            </li>
-          </ul>
-        </div>
-
       </div>
-    </div>
-    <div class="footer-copyright black-text">
-      <div class="container center">
-        © 2021 - Pouco a Pouco. Todos os direitos reservados
+    </main>
+
+    <footer id="page-footer" class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l3 s12">
+            <h6 class="blue-text">Social</h6>
+            <div class="images">
+              <img
+                src="public/images/social-media/twitter.svg"
+                alt="icone-do-twitter "
+              />
+              <img
+                src="public/images/social-media/instagram.svg"
+                alt="icone-do-instagram"
+              />
+              <img
+                src="public/images/social-media/facebook.svg"
+                alt="icone-do-facebook"
+              />
+              <img
+                src="public/images/social-media/telegram.svg"
+                alt="icone-do-telegram"
+              />
+            </div>
+          </div>
+
+          <div class="col l2 offset-l1 s12 black-text">
+            <h6 class="blue-text">Pouca a pouco</h6>
+            <ul class="">
+              <li class="active">
+                <a class="black-text text-lighten-3" href="#">Planos</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">Recursos</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">
+                  Central de Ajuda
+                </a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">
+                  Materiais gratuitos
+                </a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">Calculadoras</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">Glossário</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col l2 offset-l1 s12 black-text">
+            <h6 class="blue-text">Guias</h6>
+            <ul class="">
+              <li class="active">
+                <a class="black-text text-lighten-3" href="#"
+                  >Como economizar</a
+                >
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">Recursos</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">
+                  Planejamento financeiro
+                </a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#">
+                  Finanças pessoais
+                </a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#"
+                  >Educação financeira</a
+                >
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#"
+                  >Melhores cartões de crédito</a
+                >
+              </li>
+
+              <li>
+                <a class="black-text text-lighten-3" href="#"
+                  >Planilha de controle financeiro</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col l2 offset-l1 s12 black-text">
+            <h6 class="blue-text">Empresas</h6>
+            <ul class="">
+              <li class="active">
+                <a class="black-text text-lighten-3" href="#!">Equipe</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#!">Carreiras</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#!">Imprensa</a>
+              </li>
+              <li>
+                <a class="black-text text-lighten-3" href="#!"> Contato </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="footer-copyright black-text">
+        <div class="container center">
+          © 2021 - Pouco a Pouco. Todos os direitos reservados
+        </div>
+      </div>
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-  <script src="/assets/libraries/jquery/sidenav.js"></script>
-  <script src="/assets/resources/scripts/notification.js"></script>
-</body>
-
+    <!--   <script src="../assets/resources/scripts/constants.js"></script>
+ -->
+    <script src="assets/libraries/jquery/sidenav.js"></script>
+    <script src="assets/resources/scripts/notification.js"></script>
+  </body>
 </html>
