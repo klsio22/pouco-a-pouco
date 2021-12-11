@@ -6,10 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <script>
+    let base = document.createElement("base");
+    base.href = "//" + document.location.host + "/" /* + location.href.split("/")[3]+ "/"  */ ;
+    document.getElementsByTagName("head")[0].appendChild(base);
+  </script>
+
+
   <!-- Icon site -->
-  <link rel="icon" href="../public/images/favicon.ico" />
+  <link rel="icon" href="public/images/favicon.ico" />
   <!-- Reset Page -->
-  <link rel="stylesheet" href="../assets/resources/styles/reset.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,14 +29,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="../assets/resources/styles/main.css" />
-  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/auth.css">
-  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/desktop.css">
-  <link rel="stylesheet" href="../assets/resources/styles/auth-Login/mobile.css">
-
-  <!-- jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+  <link rel="stylesheet" href="/assets/resources/styles/main.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/auth-Login/auth.css">
+  <link rel="stylesheet" href="/assets/resources/styles/auth-Login/desktop.css">
+  <link rel="stylesheet" href="/assets/resources/styles/auth-Login/mobile.css">
 
 
   <title>Pouco a Pouco</title>
@@ -39,7 +42,7 @@
 
   <header>
     <div class="top">
-      <img src="../public/images/logo-and-icon.svg" alt="">
+      <img src="/public/images/logo-and-icon.svg" alt="">
     </div>
   </header>
 
@@ -51,7 +54,7 @@
 
         <h5>Hora de transformar suas finanças.</h5>
         <div>
-          <img class="motivation-img" src="../public/images/router.png" alt="">
+          <img class="motivation-img" src="/public/images/router.png" alt="">
         </div>
 
         <p>
@@ -96,7 +99,7 @@
                   <div class="btns-socials">
                     <div class="google-span">
                       <div class="waves-effect waves-light btn google-btn" id="googleAuthAnchor">
-                        <img src="../public/images/icon-google-logo.svg" alt="">
+                        <img src="/public/images/icon-google-logo.svg" alt="">
                         <span class="google-span-text text">Google</span>
                       </div>
                     </div>
@@ -104,34 +107,32 @@
                   <div class="btns-socials">
                     <div class="facebook-span">
                       <div class="waves-effect waves-light btn indigo darken-4 facebook-btn">
-                        <img src="../public/images/icon-facebook.svg" alt="mini icone do facebook" class="">
+                        <img src="/public/images/icon-facebook.svg" alt="mini icone do facebook" class="">
                         <span class="facebook-span-text text">Facebook</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="separator-auth">
+                <div class="separator-auth row">
                   <p class="line">OU</p>
                 </div>
               </div>
 
-               <!-- ======== Form Entrar ========== -->
-
               <form>
-                <div class="">
+                <div class="row">
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="email-auth" placeholder="Thiago@gmail.com" type="email" class="validate validateDate" >
-                      <label for="email-auth">Email</label>
+                      <input id="email-auth" placeholder="Tiago@gmail.com" type="email" class="validateDate validate" required>
+                      <label for="email-auth" class="">Email</label>
                       <div class="requerid-email alert"></div>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="password-auth" placeholder="NU2kcTXU" type="password" class="validate validateDate" >
+                      <input id="password-auth" placeholder="Ex:9XipIGSV" type="password" class="validateDate validate" requerid>
                       <label for="password-auth">Senha</label>
                       <div class="requerid-password alert"></div>
                     </div>
@@ -172,7 +173,7 @@
                   <div class="btns-socials">
                     <div class="google-span">
                       <div class="waves-effect waves-light btn google-btn" id="googleLoginAnchor">
-                        <img src="../public/images/icon-google-logo.svg" alt="">
+                        <img src="/public/images/icon-google-logo.svg" alt="">
                         <span class="google-span-text text">Google</span>
                       </div>
                     </div>
@@ -180,7 +181,7 @@
                   <div class="btns-socials">
                     <div class="facebook-span">
                       <div class="waves-effect waves-light btn indigo darken-4 facebook-btn">
-                        <img src="../public/images/icon-facebook.svg" alt="" class="">
+                        <img src="/public/images/icon-facebook.svg" alt="" class="">
                         <span class="facebook-span-text text">Facebook</span>
                       </div>
                     </div>
@@ -191,13 +192,14 @@
                   <p class="line">OU</p>
                 </div>
               </div>
+
               <!-- ======== Form Concordar e cadastrar ========== -->
 
               <form class="toSend " name="data" id="toSend">
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="name-login" placeholder="Thiago Mendes" name="name" type="text" class="validate">
+                    <input id="name-login" placeholder="Tiago Mendes" name="name" type="text" class="validate" requerid>
                     <label for="name-login">Nome</label>
                     <div id="requerid-name" class="alert"></div>
                   </div>
@@ -205,7 +207,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email-login" placeholder="Thiago@gmail.com" type="email" name="email" class="validate">
+                    <input id="email-login" placeholder="Ex: Tiago@gmail.com" type="email" name="email" class="validate" requerid>
                     <label for="email-login">Email</label>
                     <div id="requerid-email" class="alert"></div>
                   </div>
@@ -213,7 +215,7 @@
 
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password-login" placeholder="NU2kcTXU" name="password" type="password" class="validate"
+                    <input id="password-login" placeholder="Ex: 9XipIGSV" name="password" type="password" class="validate"
                       requerid>
                     <label for="password-login">Senha</label>
                     <div id="requerid-password" class="alert"></div>
@@ -265,21 +267,19 @@
     </div>
   </main>
 
-  <script src="../assets/libraries/materialize/js/materialize.js"></script>
-  <script src="../assets/resources/scripts/common.js"></script>
+  <script src="/assets/libraries/materialize/js/materialize.min.js"></script>
 
-  <script type="module" src="../assets/resources/scripts/create-requerids-auth.js"></script>
+  <script type="module" src="/assets/resources/scripts/create-requerids-auth.js"></script>
 
-  <script type="module" src="../assets/resources/scripts/create-requerids-register.js"></script>
+  <script type="module" src="/assets/resources/scripts/create-requerids-register.js"></script>
 
-  <script type="module" src="../assets/resources/scripts/change-auth-register.js"></script>
+  <script type="module" src="/assets/resources/scripts/change-auth-register.js"></script>
 
-  <script type="module" src="../assets/resources/scripts/validator-register.js"></script>
+  <script type="module" src="/assets/resources/scripts/validator-register.js"></script>
 
-  <script type="module" src="../assets/resources/scripts/validator-auth.js"></script>
+  <script type="module" src="/assets/resources/scripts/validator-auth.js"></script>
 
-  <script src="../assets/resources/scripts/change-auth-register.js"></script>
-
+  <script src="/assets/resources/scripts/change-auth-register.js"></script>
 
 </body>
 

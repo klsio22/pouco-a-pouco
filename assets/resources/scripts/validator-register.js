@@ -1,29 +1,26 @@
 "use strict";
 
 import {
-  createElementSpanName as spanName,
-  createElementSpanEmail as spanEmail,
-  createElementSpanEmailValid as spanEmailValid,
-  createElementSpanPassword as spanPassword,
   clearSpanEmail,
   clearSpanName,
-  clearSpanPassword
+  clearSpanPassword,
+  createElementSpanEmail as spanEmail,
+  createElementSpanEmailValid as spanEmailValid,
+  createElementSpanName as spanName,
+  createElementSpanPassword as spanPassword,
 } from "./create-requerids-register.js";
 
-import {
-  checkedInput
-} from './checked-input.js'
+import { checkedInput } from "./checked-input.js";
 
-const onSubmit = document.getElementById('toSend')
-const register = document.querySelector('.confirm-register')
-const inputEnter = document.getElementById('confirm-register')
+const onSubmit = document.getElementById("toSend");
+const register = document.querySelector(".confirm-register");
+const inputEnter = document.getElementById("confirm-register");
 
-const name = document.querySelector('input#name-login')
-const email = document.querySelector('input#email-login')
-const password = document.querySelector('input#password-login')
+const name = document.querySelector("input#name-login");
+const email = document.querySelector("input#email-login");
+const password = document.querySelector("input#password-login");
 
 const validateDate = {
-
   onSubmit,
   register,
   inputEnter,
@@ -36,57 +33,43 @@ const validateDate = {
       name: validateDate.name.value.trim(),
       email: validateDate.email.value.trim(),
       password: validateDate.password.value.trim(),
-    }
-
+    };
   },
 
   createElementCaseEmpty() {
-    const {
-      name,
-      email,
-      password
-    } = validateDate.getValues();
+    const { name, email, password } = validateDate.getValues();
 
-    if (name.trim() === "")
-      spanName()
-    if (email.trim() === "")
-      spanEmail()
+    if (name.trim() === "") spanName();
+    if (email.trim() === "") spanEmail();
 
-    if (password.trim() === "")
-      spanPassword()
+    if (password.trim() === "") spanPassword();
   },
 
   addDisabled() {
-    validateDate.register.classList.add('disabled');
+    validateDate.register.classList.add("disabled");
   },
 
   removeDisabled() {
-    validateDate.register.classList.remove('disabled');
+    validateDate.register.classList.remove("disabled");
   },
 
   redirect() {
-    alert('Cadrastro feito com sucesso')
-    window.location.href = "../../../views/transactions.html"
+    alert("Cadrastro feito com sucesso");
+    //window.location.href = '../../views/transactions.html'//Local Host
+    window.location.href = "views/transactions.html"; //gitPage
   },
 
   validateFields() {
-    const {
-      name,
-      email,
-      password
-    } = validateDate.getValues();
+    const { name, email, password } = validateDate.getValues();
 
-    if (name.trim() === "" ||
-      email.trim() === "" ||
-      password.trim() === "") {
+    if (name.trim() === "" || email.trim() === "" || password.trim() === "") {
       validateDate.addDisabled();
       validateDate.createElementCaseEmpty();
-      throw new Error('Por favor , preencha todos os campos')
+      throw new Error("Por favor , preencha todos os campos");
     } else {
       validateDate.removeDisabled();
       validateDate.redirect();
     }
-
   },
 
   checkForm(event) {
@@ -94,15 +77,15 @@ const validateDate = {
 
     try {
       /* Limpar messagens de avisos */
-      clearSpanName()
-      clearSpanEmail()
-      clearSpanPassword()
+      clearSpanName();
+      clearSpanEmail();
+      clearSpanPassword();
       /* Validação dos campos  */
       validateDate.validateFields();
       /* Verificar se vai se manter conectado ou não */
       checkedInput();
     } catch (err) {
-      alert(err.message)
+      alert(err.message);
     }
     //console.log(event)
   },
@@ -110,67 +93,58 @@ const validateDate = {
   validateEnter(e) {
     let key = e.which || e.keyCode;
     if (key === 13) {
-      validateFields()
+      validateFields();
     }
   },
 
   submit() {
-
-    validateDate.onSubmit.addEventListener('submit', validateDate.checkForm)
-    validateDate.inputEnter.addEventListener('keyup', validateDate.validateEnter)
-  }
-
-}
+    validateDate.onSubmit.addEventListener("submit", validateDate.checkForm);
+    validateDate.inputEnter.addEventListener(
+      "keyup",
+      validateDate.validateEnter
+    );
+  },
+};
 
 const validateFieldsOnFocusAndBlur = {
-
   validateFields() {
-    const {
-      name,
-      email,
-      password
-    } = validateDate.getValues();
+    const { name, email, password } = validateDate.getValues();
 
-    if (name.trim() === "" ||
-      email.trim() === "" ||
-      password.trim() === "") {
+    if (name.trim() === "" || email.trim() === "" || password.trim() === "") {
       validateDate.addDisabled();
     }
   },
 
   updateFields() {
     setInterval(() => {
-      validateFieldsOnFocusAndBlur.validateFields()
+      validateFieldsOnFocusAndBlur.validateFields();
     }, 10);
-
   },
 
   getName() {
     return {
-      name: validateDate.name.value.trim()
-    }
+      name: validateDate.name.value.trim(),
+    };
   },
 
   getEmail() {
     return {
-      email: validateDate.email.value.trim()
-    }
+      email: validateDate.email.value.trim(),
+    };
   },
 
   getPassword() {
     return {
-      password: validateDate.password.value.trim()
-    }
+      password: validateDate.password.value.trim(),
+    };
   },
 
   validateName() {
-    const {
-      name
-    } = validateFieldsOnFocusAndBlur.getName();
+    const { name } = validateFieldsOnFocusAndBlur.getName();
 
-    validateFieldsOnFocusAndBlur.updateFields()
+    validateFieldsOnFocusAndBlur.updateFields();
 
-    if (name == '') {
+    if (name == "") {
       spanName();
       validateDate.addDisabled();
     } else {
@@ -181,17 +155,15 @@ const validateFieldsOnFocusAndBlur = {
 
   emailValid(email) {
     let reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return reg.test(email) // retorna true
+    return reg.test(email); // retorna true
   },
 
   validateEmail() {
-    const {
-      email
-    } = validateFieldsOnFocusAndBlur.getEmail();
+    const { email } = validateFieldsOnFocusAndBlur.getEmail();
 
-    validateFieldsOnFocusAndBlur.updateFields()
+    validateFieldsOnFocusAndBlur.updateFields();
 
-    if (email === '') {
+    if (email === "") {
       spanEmail();
       validateDate.addDisabled();
     } else if (!validateFieldsOnFocusAndBlur.emailValid(email)) {
@@ -203,57 +175,58 @@ const validateFieldsOnFocusAndBlur = {
   },
 
   validatePassword() {
-    const {
-      password
-    } = validateFieldsOnFocusAndBlur.getPassword();
+    const { password } = validateFieldsOnFocusAndBlur.getPassword();
 
     let reg = /^[a-zA-Z0-9!@#$%^&*]{6,32}$/;
 
-    validateFieldsOnFocusAndBlur.updateFields()
+    validateFieldsOnFocusAndBlur.updateFields();
 
-    if (password === '') {
+    if (password === "") {
       spanPassword();
       validateDate.addDisabled();
-    } else if (!reg.test(password)) { //false
-      alert('A senha deve conter pelo menos um número e um caractere especial')
+    } else if (!reg.test(password)) {
+      //false
+      alert("A senha deve conter pelo menos um número e um caractere especial");
       spanPassword();
     } else {
       clearSpanPassword();
       validateDate.removeDisabled();
-      console.log(password)
+      console.log(password);
     }
-
   },
 
   exec() {
+    validateDate.name.addEventListener("focus", () => {
+      validateFieldsOnFocusAndBlur.updateFields();
+      clearSpanName();
+    });
 
-    validateDate.name.addEventListener('focus', () => {
-      validateFieldsOnFocusAndBlur.updateFields()
-      clearSpanName()
-    })
+    validateDate.email.addEventListener("focus", () => {
+      validateFieldsOnFocusAndBlur.updateFields();
+      clearSpanEmail();
+    });
 
-    validateDate.email.addEventListener('focus', () => {
-      validateFieldsOnFocusAndBlur.updateFields()
-      clearSpanEmail()
-    })
+    validateDate.password.addEventListener("focus", () => {
+      validateFieldsOnFocusAndBlur.updateFields();
+      clearSpanPassword();
+    });
 
-    validateDate.password.addEventListener('focus', () => {
-      validateFieldsOnFocusAndBlur.updateFields()
-      clearSpanPassword()
-    })
+    validateDate.name.addEventListener(
+      "blur",
+      validateFieldsOnFocusAndBlur.validateName
+    );
 
-    validateDate.name.addEventListener('blur',
-      validateFieldsOnFocusAndBlur.validateName)
+    validateDate.email.addEventListener(
+      "blur",
+      validateFieldsOnFocusAndBlur.validateEmail
+    );
 
-    validateDate.email.addEventListener('blur',
-      validateFieldsOnFocusAndBlur.validateEmail)
-
-    validateDate.password.addEventListener('blur',
-      validateFieldsOnFocusAndBlur.validatePassword)
-
-  }
-
-}
+    validateDate.password.addEventListener(
+      "blur",
+      validateFieldsOnFocusAndBlur.validatePassword
+    );
+  },
+};
 
 validateDate.submit();
 
