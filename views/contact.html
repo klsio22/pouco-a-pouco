@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Comente esse trecho do codigo quando estiver no localhost
+      
+      + location.href.split("/")[3] +  -->
+
+  <script>
+    let base = document.createElement("base");
+    base.href =
+      "//" + document.location.host + "/" /* + location.href.split("/")[3] + "/" */ ;
+    /*       document.getElementsByTagName("head")[0].appendChild(base);
+     */
+  </script>
+
+  <!-- Icon site -->
+  <link rel="icon" href="/public/images/favicon.ico" />
+
+  <!-- Reset Page -->
+  <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Materialize -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+
+  <!-- Styles -->
+
+  <link rel="stylesheet" href="/assets/resources/styles/main.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/contact/home.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/contact/desktop.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/contact/mobile.css" />
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <title>Pouco a Pouco</title>
+</head>
+
+<body>
+  <header>
+    <nav class="">
+      <div class="nav-wrapper container">
+        <div class="nav-menu">
+          <a href="#!" id="brand-logo" class="brand-logo">
+            <img class="logo" id="logo" src="/public/images/logo-and-icon.svg" alt="logo" />
+            <img class="logo-mobile" id="logo-mobile" src="/public/images/icon-logo.svg" alt="icon logo mobile" />
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">
+              <img src="/public/images/menu.png" alt="" />
+            </i>
+          </a>
+
+          <ul class="hide-on-med-and-down" id="menu">
+            <li><a class="blue-text" href="/index.html">Início </a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="bottom-register">
+          <a class="login" id="login" href="views/auth.html">Entrar</a>
+          <a href="views/auth.html" id="registration" class="waves-effect waves-light light-blue accent-4 btn">
+            Começar Grátis
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="home.html">Início</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="plans.html">Planos</a></li>
+      <li><a href="resources.html">Recursos</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <header class="row center">
+        <h4 class="black-text title">
+          Central de ajuda
+        </h4>
+        <h6 class="black-text">Enviar uma solicitação</h6>
+      </header>
+
+      <div class="row center">
+        <form class="col s12">
+
+          <div class="row">
+            <div class="input-field col xl6 l6 m12 s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+              <span class="helper-text" data-error="Email incorreto" data-success="Tudo ok!"></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col xl6 l6 m12 s12">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">Assunto</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col xl6 l6 m12 s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Descrição</label>
+              <p>Insira os detalhes de sua solicitação. Um membro de nossa equipe de suporte responderá assim que
+                possível.</p>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="input-field col xl6 l6 m12 s12">
+              <label for=""></label>
+              <select>
+                <option value="" disabled selected>-</option>
+                <option value="1">Assinatura Premium</option>
+                <option value="2">Preciso de ajuda com uma funcionalide</option>
+                <option value="3">Sicronização de dados</option>
+                <option value="4">Conceitos basicos</option>
+                <option value="5">Integração bancária</option>
+                <option value="6">Clube de Benefícios </option>
+                <option value="7">Segurança e LGPD </option>
+                <option value="8">Outros assuntos </option>
+              </select>
+              <label>Materialize Select</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col xl6 l6 m12 s12">
+              <label for=""></label>
+              <select>
+                <option value="" disabled selected>-</option>
+                <option value="1">Dúvidas e solicitações</option>
+              </select>
+              <label>Materialize Select</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col xl6 l6 m12 s12">
+              <input class="form-control" type="file" id="formFile">
+              <label for="formFile" class="form-label"></label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+  <footer id="page-footer" class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l3 s12">
+          <h6 class="blue-text">Social</h6>
+          <div class="images">
+            <img src="/public/images/social-media/twitter.svg" alt="icone-do-twitter " />
+            <img src="/public/images/social-media/instagram.svg" alt="icone-do-instagram" />
+            <img src="/public/images/social-media/facebook.svg" alt="icone-do-facebook" />
+            <img src="/public/images/social-media/telegram.svg" alt="icone-do-telegram" />
+          </div>
+        </div>
+
+        <div class="col l2 offset-l1 s12 black-text">
+          <h6 class="blue-text">Pouca a pouco</h6>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#">Planos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Recursos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Central de Ajuda
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Materiais gratuitos
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Calculadoras</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Glossário</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col l2 offset-l1 s12 black-text">
+          <h6 class="blue-text">Guias</h6>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#">Como economizar</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Recursos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Planejamento financeiro
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Finanças pessoais
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Educação financeira</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Melhores cartões de crédito</a>
+            </li>
+
+            <li>
+              <a class="black-text text-lighten-3" href="#">Planilha de controle financeiro</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col l2 offset-l1 s12 black-text">
+          <h6 class="blue-text">Empresas</h6>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#!">Equipe</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">Carreiras</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">Imprensa</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!"> Contato </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright black-text">
+      <div class="container center">
+        © 2021 - Pouco a Pouco. Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+  <script src="/assets/resources/scripts/select.js"></script>
+  <script src="/assets/resources/scripts/sidenav.js"></script>
+</body>
+
+</html>

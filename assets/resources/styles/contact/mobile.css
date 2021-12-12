@@ -1,0 +1,36 @@
+#mobile-demo {
+  margin-top: 4rem;
+}
+
+#mobile-demo li a {
+  border-bottom: solid 1px rgb(29, 29, 29,0.15);
+}
+
+@media only screen and (max-width: 992px){
+  nav #brand-logo{
+    left: 6.0rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  header .container {
+    justify-content:space-between;
+  }
+  .logo-mobile{
+    padding-left: 0.5rem;
+  }
+  
+  .logo{
+    display: none;
+  }
+  
+  header nav .bottom-register{
+    margin-left: 2.1rem;
+  }
+
+  main .girl{
+    display: none;
+  }
+
+}
+

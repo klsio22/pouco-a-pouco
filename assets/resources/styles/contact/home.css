@@ -1,0 +1,68 @@
+body {
+  min-width: 350px;
+  font-size: 14px;
+}
+
+#login {
+  color: #2962ff;
+}
+
+header nav {
+  background-color: #e2ffd8;
+}
+
+header nav .sidenav-trigger .material-icons {
+  padding: 0.4rem 0;
+}
+
+nav ul li a {
+  color: #000;
+}
+
+header .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header nav .container #menu {
+  padding-left: 20rem;
+}
+
+header nav .bottom-register #registration {
+  margin-left: 1rem;
+  border-radius: 10rem;
+}
+
+header nav .bottom-register{
+  padding: 1rem;
+  margin-left: 5rem;
+}
+
+main {
+  padding: 0.5rem;
+}
+
+main .title{
+  font-weight: bold;
+}
+
+main .figure{
+  margin-top: 1rem;
+}
+
+#page-footer {
+  background-color: #e2ffd8;
+}
+
+.page-footer h6 {
+  margin-bottom: 1rem;
+}
+
+.page-footer .images img {
+  margin-right: 1rem;
+}
+
+.page-footer .images img:last-child {
+  margin-right: 0rem;
+}
