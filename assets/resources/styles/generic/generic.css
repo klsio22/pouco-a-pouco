@@ -34,7 +34,11 @@ header nav .bottom-register #registration {
   border-radius: 10rem;
 }
 
-header nav .bottom-register{
+header nav .bottom-register .btn:hover {
+  color: rgb(37, 37, 37);
+}
+
+header nav .bottom-register {
   padding: 1rem;
   margin-left: 5rem;
 }
@@ -43,11 +47,11 @@ main {
   padding: 0.5rem;
 }
 
-main .title{
+main .title {
   font-weight: bold;
 }
 
-main .figure{
+main .figure {
   margin-top: 1rem;
 }
 

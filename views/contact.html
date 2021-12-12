@@ -38,11 +38,12 @@
   <!-- Styles -->
 
   <link rel="stylesheet" href="/assets/resources/styles/main.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/contact/home.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/contact/desktop.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/contact/mobile.css" />
-
+  <link rel="stylesheet" href="/assets/resources/styles/generic/generic.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/generic/generic-desktop.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/generic/generic-mobile.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/contact/contact.css" />
   <!-- jquery -->
+
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
   <title>Pouco a Pouco</title>
@@ -63,8 +64,8 @@
           </a>
 
           <ul class="hide-on-med-and-down" id="menu">
-            <li><a class="blue-text" href="/index.html">Início </a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a class="" href="/index.html">Início </a></li>
+            <li><a href="#" class="blue-text">Contato</a></li>
           </ul>
         </div>
 
@@ -78,11 +79,8 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="home.html">Início</a></li>
-      <li><a href="about.html">Sobre</a></li>
-      <li><a href="plans.html">Planos</a></li>
-      <li><a href="resources.html">Recursos</a></li>
-      <li><a href="contact.html">Contato</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="views/contact.html">Contato</a></li>
     </ul>
   </header>
 
@@ -93,41 +91,57 @@
         <h4 class="black-text title">
           Central de ajuda
         </h4>
-        <h6 class="black-text">Enviar uma solicitação</h6>
+        <h6 class="black-text">
+          Enviar uma solicitação
+        </h6>
       </header>
 
-      <div class="row center">
-        <form class="col s12">
+      <div class="row">
+
+        <form id="contact" class="col xl12 l12 m12 s12">
 
           <div class="row">
-            <div class="input-field col xl6 l6 m12 s12">
-              <input id="email" type="email" class="validate">
+            <div class="input-field col xl12 l12 m12 s12">
               <label for="email">Email</label>
+              <input id="email" type="email" name="email" class="validate form-control">
+              <div class="required-email ">
+               <!--  <span> Solicitante: E-mail: não pode ficar em branco</span> -->
+              </div>
               <span class="helper-text" data-error="Email incorreto" data-success="Tudo ok!"></span>
             </div>
           </div>
 
           <div class="row">
-            <div class="input-field col xl6 l6 m12 s12">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="first_name">Assunto</label>
+            <div class="input-field col xl12 l12 m12 s12">
+              <input placeholder="Placeholder" name="theme" id="theme" type="text" class="validate">
+              <label for="theme">Assunto</label>
+              <div class="error">
+                <span> Assunto: não pode ficar em branco
+                </span>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="input-field col xl6 l6 m12 s12">
+            <div class="input-field col xl12 l12 m12 s12">
               <textarea id="textarea1" class="materialize-textarea"></textarea>
               <label for="textarea1">Descrição</label>
+              <div class="error">
+                <span> Descrição: não pode ficar em branco
+                </span>
+              </div>
+
               <p>Insira os detalhes de sua solicitação. Um membro de nossa equipe de suporte responderá assim que
                 possível.</p>
+                
             </div>
           </div>
 
           <div class="row">
 
-            <div class="input-field col xl6 l6 m12 s12">
+            <div class="input-field col xl12 l12 m12 s12">
               <label for=""></label>
-              <select>
+              <select name="doubt">
                 <option value="" disabled selected>-</option>
                 <option value="1">Assinatura Premium</option>
                 <option value="2">Preciso de ajuda com uma funcionalide</option>
@@ -138,12 +152,12 @@
                 <option value="7">Segurança e LGPD </option>
                 <option value="8">Outros assuntos </option>
               </select>
-              <label>Materialize Select</label>
+              <label>Dúvidas e solicitações</label>
             </div>
           </div>
 
           <div class="row">
-            <div class="input-field col xl6 l6 m12 s12">
+            <div class="input-field col xl12 l12 m12 s12">
               <label for=""></label>
               <select>
                 <option value="" disabled selected>-</option>
@@ -153,10 +167,24 @@
             </div>
           </div>
 
+
           <div class="row">
-            <div class="input-field col xl6 l6 m12 s12">
+            <div class="annex input-field col xl12 l12 m12 s12 center">
+              <p>Anexo</p>
               <input class="form-control" type="file" id="formFile">
-              <label for="formFile" class="form-label"></label>
+              <span></span>
+            </div>
+          </div>
+
+
+          <div class="">
+            <div class="register-page center">
+              <button id="confirm-register" type="submit" value="Submit"
+                class="waves-effect waves-light light-blue accent-4 btn-large confirm-register">
+                <span class="enter-span-text text">
+                  Enviar
+                </span>
+              </button>
             </div>
           </div>
 
@@ -267,8 +295,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
-
+  <script src="/assets/resources/scripts/validator-contact.js"></script>
   <script src="/assets/resources/scripts/select.js"></script>
   <script src="/assets/resources/scripts/sidenav.js"></script>
 </body>
