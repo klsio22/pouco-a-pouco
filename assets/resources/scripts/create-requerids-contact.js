@@ -4,10 +4,17 @@ const createElementSpanEmail = () => {
     .addClass("error");
 };
 
-
 const createElementSpanSuject = () => {
   $("#required-subject")
     .append("<span> Assunto: não pode ficar em branco </span>")
+    .addClass("error");
+};
+
+const createElementSpanDoubt = () => {
+  $(".required-doubt")
+    .append(
+      "<span> Qual é o motivo da solicitação?: não pode ficar em branco </span>"
+    )
     .addClass("error");
 };
 
@@ -24,7 +31,6 @@ const createElementSpanDescript = () => {
     });
 };
 
-
 const clearSpanEmail = function () {
   $(".required-email").removeClass("error").html("");
 };
@@ -34,9 +40,12 @@ const clearSpanSubjet = function () {
 };
 
 const clearSpanDescript = () => {
-  $(".description div").html("").css({border: ""});
+  $(".description div").html("").css({ border: "" });
 };
 
+const clearSpandoubt = () => {
+  $("span").parent(".required-doubt").removeClass("error").html("");
+};
 
 export {
   createElementSpanEmail,
@@ -45,4 +54,6 @@ export {
   clearSpanSubjet,
   createElementSpanDescript,
   clearSpanDescript,
+  createElementSpanDoubt,
+  clearSpandoubt,
 };

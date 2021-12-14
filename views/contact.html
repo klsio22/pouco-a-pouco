@@ -111,22 +111,19 @@
 
           <div class="row">
             <div class="input-field col xl12 l12 m12 s12">
-              <input placeholder="Ex: Como tenho certeza da segurança da plataforma ?" name="theme" id="theme" type="text" class="validate">
+              <input placeholder="Ex: Como tenho certeza da segurança da plataforma ?" name="theme" id="theme"
+                type="text" class="validate subject">
               <label for="theme">Assunto</label>
               <div id="required-subject" class="required-subject ">
-                <!-- <span> Assunto: não pode ficar em branco
-                </span> -->
               </div>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row text-description">
             <div class="input-field col xl12 l12 m12 s12 description">
               <textarea id="textarea1" class="materialize-textarea"></textarea>
               <label for="textarea1">Descrição</label>
               <div class="">
-                <!-- <span> Descrição: não pode ficar em branco
-                </span> -->
               </div>
 
               <p>Insira os detalhes de sua solicitação. Um membro de nossa equipe de suporte responderá assim que
@@ -138,6 +135,7 @@
           <div class="row select0">
 
             <div class="input-field col xl12 l12 m12 s12">
+              <label for=""></label>
               <select name="doubt">
                 <option value="" disabled selected>-</option>
                 <option value="1">Assinatura Premium</option>
@@ -150,18 +148,23 @@
                 <option value="8">Outros assuntos </option>
               </select>
               <label>Dúvidas e solicitações</label>
+              <div class="required-doubt">
+               
+              </div>
             </div>
           </div>
 
           <div class="row select1">
             <div class="input-field col xl12 l12 m12 s12">
-              <select class="">
+              <label for=""></label>
+              <select>
                 <option value="" disabled selected>-</option>
                 <option value="1">Dúvidas e solicitações</option>
               </select>
-              <label>Materialize Select</label>
+              <label>Dúvidas</label>
             </div>
           </div>
+
 
           <div class="row">
             <div class="annex input-field col xl12 l12 m12 s12 center">
@@ -171,11 +174,10 @@
             </div>
           </div>
 
-
           <div class="">
             <div class="register-page center">
-              <button id="confirm-register" type="submit" value="Submit"
-                class="waves-effect waves-light light-blue accent-4 btn-large confirm-register">
+              <button id="confirm" type="submit" value="Submit"
+                class="waves-effect waves-light light-blue accent-4 btn-large confirm">
                 <span class="enter-span-text text">
                   Enviar
                 </span>

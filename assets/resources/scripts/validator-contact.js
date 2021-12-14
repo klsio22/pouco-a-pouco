@@ -5,6 +5,8 @@ import {
   clearSpanSubjet,
   createElementSpanDescript,
   clearSpanDescript,
+  createElementSpanDoubt,
+  clearSpandoubt,
 } from "./create-requerids-contact.js";
 
 $(document).ready(function () {
@@ -46,6 +48,70 @@ $(document).ready(function () {
     clearSpanDescript();
   });
 
-  $("form .select1").hide();
-  console.log($("form .select0 option:selected").val);
+  $(".select1").hide();
+
+  $("form .select0 select")
+    .change(function () {
+      let value = 0;
+
+      $("select option:selected").each(function () {
+        value = $("select option:selected").val();
+      });
+
+      //console.log(value);
+
+      if (value > 0) {
+        $("form .select0").next().show();
+      }
+    })
+    .trigger("change");
+
+  //Submit no Form
+  $("form").submit(function (event) {
+
+    
+
+    if (email.value.trim() == "") {
+      clearSpanEmail();
+      createElementSpanEmail();
+    } else {
+      clearSpanEmail();
+    }
+
+    if ($("form .subject").val().trim() == "") {
+      clearSpanSubjet();
+      createElementSpanSuject();
+    } else {
+      clearSpanSubjet();
+    }
+
+    if ($(".description textarea").val().trim() == "") {
+      clearSpanDescript();
+      createElementSpanDescript();
+    } else {
+      clearSpanDescript();
+    }
+
+    $("form .select0 select")
+      .change(function () {
+        let value = 0;
+
+        $("select option:selected").each(function () {
+          value = $("select option:selected").val();
+        });
+
+        //console.log(value);
+
+        if (value > 0) {
+          $("form .select0").next().show();
+          clearSpandoubt();
+        } else {
+          clearSpandoubt();
+          createElementSpanDoubt();
+        }
+      })
+      .trigger("change");
+
+    event.preventDefault();
+  });
 });
