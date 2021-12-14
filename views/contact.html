@@ -104,43 +104,40 @@
             <div class="input-field col xl12 l12 m12 s12">
               <label for="email">Email</label>
               <input id="email" type="email" name="email" class="validate form-control">
-              <div class="required-email ">
-               <!--  <span> Solicitante: E-mail: não pode ficar em branco</span> -->
-              </div>
+              <div class="required-email "></div>
               <span class="helper-text" data-error="Email incorreto" data-success="Tudo ok!"></span>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col xl12 l12 m12 s12">
-              <input placeholder="Placeholder" name="theme" id="theme" type="text" class="validate">
+              <input placeholder="Ex: Como tenho certeza da segurança da plataforma ?" name="theme" id="theme" type="text" class="validate">
               <label for="theme">Assunto</label>
-              <div class="error">
-                <span> Assunto: não pode ficar em branco
-                </span>
+              <div id="required-subject" class="required-subject ">
+                <!-- <span> Assunto: não pode ficar em branco
+                </span> -->
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="input-field col xl12 l12 m12 s12">
+            <div class="input-field col xl12 l12 m12 s12 description">
               <textarea id="textarea1" class="materialize-textarea"></textarea>
               <label for="textarea1">Descrição</label>
-              <div class="error">
-                <span> Descrição: não pode ficar em branco
-                </span>
+              <div class="">
+                <!-- <span> Descrição: não pode ficar em branco
+                </span> -->
               </div>
 
               <p>Insira os detalhes de sua solicitação. Um membro de nossa equipe de suporte responderá assim que
                 possível.</p>
-                
+
             </div>
           </div>
 
-          <div class="row">
+          <div class="row select0">
 
             <div class="input-field col xl12 l12 m12 s12">
-              <label for=""></label>
               <select name="doubt">
                 <option value="" disabled selected>-</option>
                 <option value="1">Assinatura Premium</option>
@@ -156,17 +153,15 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row select1">
             <div class="input-field col xl12 l12 m12 s12">
-              <label for=""></label>
-              <select>
+              <select class="">
                 <option value="" disabled selected>-</option>
                 <option value="1">Dúvidas e solicitações</option>
               </select>
               <label>Materialize Select</label>
             </div>
           </div>
-
 
           <div class="row">
             <div class="annex input-field col xl12 l12 m12 s12 center">
@@ -295,9 +290,11 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <script src="/assets/resources/scripts/validator-contact.js"></script>
+  <script type="module" src="/assets/resources/scripts/create-requerids-contact.js"></script>
+  <script type="module" src="/assets/resources/scripts/validator-contact.js"></script>
   <script src="/assets/resources/scripts/select.js"></script>
   <script src="/assets/resources/scripts/sidenav.js"></script>
+
 </body>
 
 </html>
