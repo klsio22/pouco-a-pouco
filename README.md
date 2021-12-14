@@ -106,7 +106,7 @@
 - [x] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
 
 - [x] Usar strict mode
-  - [ ] Usar Module Pattern
+  - [x] Usar Module Pattern
 
 - [x] Usar pasta assets e subpastas resources e libraries para organizar o código
 
@@ -136,11 +136,11 @@
 
 ## jQuery
 
-- [ ] Uso de seletores CSS - id, classe e tag
+- [x] Uso de seletores CSS - id, classe e tag
 
-- [ ] Uso de seletores hierárquicos estáticos - ancestral/descendente, pai/filho, anterior/próximo
+- [x] Uso de seletores hierárquicos estáticos - ancestral/descendente, pai/filho, anterior/próximo
 
-- [ ] Uso de seletores hierárquicos dinâmicos - parent/children/next
+- [x] Uso de seletores hierárquicos dinâmicos - parent/children/next
 
 - [ ] Efeitos fade ou slide
 
