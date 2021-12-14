@@ -13,7 +13,7 @@
   <script>
     let base = document.createElement("base");
     base.href =
-      "/" + document.location.host + "/" + location.href.split("/")[3] + "/";
+      "//" + document.location.host + "/" + location.href.split("/")[3] + "/";
     document.getElementsByTagName("head")[0].appendChild(base);
   </script>
 
@@ -22,7 +22,7 @@
   <link rel="icon" href="public/images/favicon.ico" />
 
   <!-- Reset Page -->
-  <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
+  <link rel="stylesheet" href="assets/resources/styles/reset.css" />
 
   <!-- Fonts -->
 
@@ -36,18 +36,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/resources/styles/main.css" />
+  <link rel="stylesheet" href="assets/resources/styles/main.css" />
 
-  <link rel="stylesheet" href="/assets/resources/styles/transactions/transaction.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/transactions/classes_and_id.css" />
-  <link rel="stylesheet" href="/assets/resources/styles/transactions/desktop.css" />
+  <link rel="stylesheet" href="assets/resources/styles/transactions/transaction.css" />
+  <link rel="stylesheet" href="assets/resources/styles/transactions/classes_and_id.css" />
+  <link rel="stylesheet" href="assets/resources/styles/transactions/desktop.css" />
 
   <title>Pouco a Pouco - Transações</title>
 </head>
 
 <body>
   <header>
-    <img id="logo" src="/public/images/logo-white.svg" alt="Logo Pouco a Pouco" />
+    <img id="logo" src="public/images/logo-white.svg" alt="Logo Pouco a Pouco" />
   </header>
 
   <main id="container" class="container">
@@ -56,7 +56,7 @@
       <div class="card">
         <h3>
           <span>Entradas</span>
-          <img src="/public/images/income.svg" alt="Renda total" />
+          <img src="public/images/income.svg" alt="Renda total" />
         </h3>
         <p id="incomeDisplay">R$ 0,00</p>
       </div>
@@ -64,7 +64,7 @@
       <div class="card">
         <h3>
           <span>Saidas</span>
-          <img src="/public/images/expense.svg" alt="Despesas totais" />
+          <img src="public/images/expense.svg" alt="Despesas totais" />
         </h3>
         <p id="expenseDisplay">R$ 0,00</p>
       </div>
@@ -72,7 +72,7 @@
       <div class="card total">
         <h3>
           <span>Total</span>
-          <img src="/public/images/total.svg" alt="Total" />
+          <img src="public/images/total.svg" alt="Total" />
         </h3>
         <p id="totalDisplay">R$ 0,00</p>
       </div>
@@ -141,7 +141,7 @@
     <div class="row">
       <div id="icon-back" class="icon-back">
         <a href="#" class="back-home">
-          <img src="/public/images/arrow-left.svg" alt="seta esquerda para voltar" />
+          <img src="public/images/arrow-left.svg" alt="seta esquerda para voltar" />
         </a>
       </div>
 
@@ -159,10 +159,10 @@
         <div class="col l3 s12">
           <h6 class="blue-text">Social</h6>
           <div class="images">
-            <img src="/public/images/social-media/twitter.svg" alt="icone-do-twitter " />
-            <img src="/public/images/social-media/instagram.svg" alt="icone-do-instagram" />
-            <img src="/public/images/social-media/facebook.svg" alt="icone-do-facebook" />
-            <img src="/public/images/social-media/telegram.svg" alt="icone-do-telegram" />
+            <img src="public/images/social-media/twitter.svg" alt="icone-do-twitter " />
+            <img src="public/images/social-media/instagram.svg" alt="icone-do-instagram" />
+            <img src="public/images/social-media/facebook.svg" alt="icone-do-facebook" />
+            <img src="public/images/social-media/telegram.svg" alt="icone-do-telegram" />
           </div>
         </div>
 
@@ -252,7 +252,7 @@
     </div>
   </footer>
 
-  <script src="/assets/resources/scripts/transaction.js"></script>
+  <script src="assets/resources/scripts/transaction.js"></script>
 </body>
 
 </html>
