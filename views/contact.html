@@ -7,15 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Comente esse trecho do codigo quando estiver no localhost
-      
       + location.href.split("/")[3] +  -->
 
   <script>
     let base = document.createElement("base");
     base.href =
-      "//" + document.location.host + "/" /* + location.href.split("/")[3] + "/" */ ;
-    /*       document.getElementsByTagName("head")[0].appendChild(base);
-     */
+      "/" + document.location.host + "/" + location.href.split("/")[3] + "/";
+    document.getElementsByTagName("head")[0].appendChild(base);
   </script>
 
   <!-- Icon site -->
@@ -149,7 +147,7 @@
               </select>
               <label>Dúvidas e solicitações</label>
               <div class="required-doubt">
-               
+
               </div>
             </div>
           </div>

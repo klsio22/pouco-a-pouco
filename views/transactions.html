@@ -1,311 +1,258 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Comente esse trecho do codigo quando estiver no localhost
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Comente esse trecho do codigo quando estiver no localhost
       
       + location.href.split("/")[3] +  -->
-      
-    <script>
-      let base = document.createElement("base");
-      base.href = "//" + document.location.host + "/" /* + location.href.split("/")[3]+ "/"  */;
-      document.getElementsByTagName("head")[0].appendChild(base);
-    </script>
 
-    <!-- Icon site -->
+  <script>
+    let base = document.createElement("base");
+    base.href =
+      "/" + document.location.host + "/" + location.href.split("/")[3] + "/";
+    document.getElementsByTagName("head")[0].appendChild(base);
+  </script>
 
-    <link rel="icon" href="public/images/favicon.ico" />
+  <!-- Icon site -->
 
-    <!-- Reset Page -->
-    <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
+  <link rel="icon" href="public/images/favicon.ico" />
 
-    <!-- Fonts -->
+  <!-- Reset Page -->
+  <link rel="stylesheet" href="/assets/resources/styles/reset.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Fonts -->
 
-    <!-- Materialize -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+    rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+  <!-- Materialize -->
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/assets/resources/styles/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
-    <link
-      rel="stylesheet"
-      href="/assets/resources/styles/transactions/transaction.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/resources/styles/transactions/classes_and_id.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/resources/styles/transactions/desktop.css"
-    />
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/resources/styles/main.css" />
 
-    <title>Pouco a Pouco - Transações</title>
-  </head>
+  <link rel="stylesheet" href="/assets/resources/styles/transactions/transaction.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/transactions/classes_and_id.css" />
+  <link rel="stylesheet" href="/assets/resources/styles/transactions/desktop.css" />
 
-  <body>
-    <header>
-      <img
-        id="logo"
-        src="/public/images/logo-white.svg"
-        alt="Logo Pouco a Pouco"
-      />
-    </header>
+  <title>Pouco a Pouco - Transações</title>
+</head>
 
-    <main id="container" class="container">
-      <section id="balance">
-        <h2 class="sr-only">Balanço</h2>
-        <div class="card">
-          <h3>
-            <span>Entradas</span>
-            <img src="/public/images/income.svg" alt="Renda total" />
-          </h3>
-          <p id="incomeDisplay">R$ 0,00</p>
+<body>
+  <header>
+    <img id="logo" src="/public/images/logo-white.svg" alt="Logo Pouco a Pouco" />
+  </header>
+
+  <main id="container" class="container">
+    <section id="balance">
+      <h2 class="sr-only">Balanço</h2>
+      <div class="card">
+        <h3>
+          <span>Entradas</span>
+          <img src="/public/images/income.svg" alt="Renda total" />
+        </h3>
+        <p id="incomeDisplay">R$ 0,00</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Saidas</span>
+          <img src="/public/images/expense.svg" alt="Despesas totais" />
+        </h3>
+        <p id="expenseDisplay">R$ 0,00</p>
+      </div>
+
+      <div class="card total">
+        <h3>
+          <span>Total</span>
+          <img src="/public/images/total.svg" alt="Total" />
+        </h3>
+        <p id="totalDisplay">R$ 0,00</p>
+      </div>
+    </section>
+
+    <section id="transition">
+      <h2 class="sr-only">Transação</h2>
+      <a class="button new">+Nova Transação</a>
+
+      <table id="date-table">
+        <!-- Base da tabela -->
+        <!-- Cabeçario da tabela -->
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Remover</th>
+            <th>Editar</th>
+          </tr>
+        </thead>
+        <!-- Corpo da tabela -->
+
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Configurar o modal do materializer com efeito -->
+  <div id="active-modal" class="modal-overlay">
+    <div class="modal-1">
+      <div id="add-transition">
+        <h6>Nova Transação</h6>
+        <form action="#" id="form">
+          <div class="input-group">
+            <label for="description" class="sr-only">Valor</label>
+            <input type="text" id="description" name="description" placeholder="Descrição" value="" />
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="amount">Descrição</label>
+            <input type="number" step="0.01" id="amount" name="amount" placeholder="0,00" />
+
+            <p class="help">
+              Use o sinal -(negativo) para despesas e , virgula para casas
+              decimais
+            </p>
+          </div>
+
+          <div class="input-group">
+            <label for="date" class="sr-only">Valor</label>
+            <input type="date" id="date" name="date" />
+            <p class="help">dd/mm/aaaa</p>
+          </div>
+
+          <div class="input-group actions">
+            <a class="button cancel">Cancelar</a>
+            <button type="submit">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class=".container" id="back-home">
+    <div class="row">
+      <div id="icon-back" class="icon-back">
+        <a href="#" class="back-home">
+          <img src="/public/images/arrow-left.svg" alt="seta esquerda para voltar" />
+        </a>
+      </div>
+
+      <div id="btn-back" class="btn-back">
+        <a href="#" class="waves-effect waves-light light-blue accent-4 btn back-home">
+          voltar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer id="page-footer" class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l3 s12">
+          <h6 class="blue-text">Social</h6>
+          <div class="images">
+            <img src="/public/images/social-media/twitter.svg" alt="icone-do-twitter " />
+            <img src="/public/images/social-media/instagram.svg" alt="icone-do-instagram" />
+            <img src="/public/images/social-media/facebook.svg" alt="icone-do-facebook" />
+            <img src="/public/images/social-media/telegram.svg" alt="icone-do-telegram" />
+          </div>
         </div>
 
-        <div class="card">
-          <h3>
-            <span>Saidas</span>
-            <img src="/public/images/expense.svg" alt="Despesas totais" />
-          </h3>
-          <p id="expenseDisplay">R$ 0,00</p>
+        <div class="col l2 offset-l1 s12 black-text">
+          <h6 class="blue-text">Pouca a pouco</h6>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#">Planos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Recursos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Central de Ajuda
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Materiais gratuitos
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Calculadoras</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Glossário</a>
+            </li>
+          </ul>
         </div>
 
-        <div class="card total">
-          <h3>
-            <span>Total</span>
-            <img src="/public/images/total.svg" alt="Total" />
-          </h3>
-          <p id="totalDisplay">R$ 0,00</p>
+        <div class="col l2 offset-l1 s12 black-text">
+          <h6 class="blue-text">Guias</h6>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#">Como economizar</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Recursos</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Planejamento financeiro
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">
+                Finanças pessoais
+              </a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Educação financeira</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#">Melhores cartões de crédito</a>
+            </li>
+
+            <li>
+              <a class="black-text text-lighten-3" href="#">Planilha de controle financeiro</a>
+            </li>
+          </ul>
         </div>
-      </section>
 
-      <section id="transition">
-        <h2 class="sr-only">Transação</h2>
-        <a class="button new" >+Nova Transação</a>
-       
-        <table id="date-table">
-          <!-- Base da tabela -->
-          <!-- Cabeçario da tabela -->
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Data</th>
-              <th>Remover</th>
-              <th>Editar</th>
-            </tr>
-          </thead>
-          <!-- Corpo da tabela -->
-
-          <tbody></tbody>
-        </table>
-      </section>
-    </main>
-
-    <!-- Configurar o modal do materializer com efeito -->
-    <div id="active-modal" class="modal-overlay">
-      <div class="modal-1">
-        <div id="add-transition">
-          <h6>Nova Transação</h6>
-          <form action="#" id="form">
-            <div class="input-group">
-              <label for="description" class="sr-only">Valor</label>
-              <input
-                type="text"
-                id="description"
-                name="description"
-                placeholder="Descrição"
-                value=""
-              />
-            </div>
-
-            <div class="input-group">
-              <label class="sr-only" for="amount">Descrição</label>
-              <input
-                type="number"
-                step="0.01"
-                id="amount"
-                name="amount"
-                placeholder="0,00"
-              />
-
-              <p class="help">
-                Use o sinal -(negativo) para despesas e , virgula para casas
-                decimais
-              </p>
-            </div>
-
-            <div class="input-group">
-              <label for="date" class="sr-only">Valor</label>
-              <input type="date" id="date" name="date" />
-              <p class="help">dd/mm/aaaa</p>
-            </div>
-
-            <div class="input-group actions">
-              <a class="button cancel">Cancelar</a>
-              <button type="submit">Salvar</button>
-            </div>
-          </form>
+        <div class="col l2 offset-l1 s12 black-text">
+          <h6 class="blue-text">Empresas</h6>
+          <ul class="">
+            <li class="active">
+              <a class="black-text text-lighten-3" href="#!">Equipe</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">Carreiras</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!">Imprensa</a>
+            </li>
+            <li>
+              <a class="black-text text-lighten-3" href="#!"> Contato </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <div class=".container" id="back-home">
-      <div class="row">
-        <div id="icon-back" class="icon-back">
-          <a href="#" class="back-home">
-            <img
-              src="/public/images/arrow-left.svg"
-              alt="seta esquerda para voltar"
-            />
-          </a>
-        </div>
-
-        <div id="btn-back" class="btn-back">
-          <a
-            href="#"
-            class="waves-effect waves-light light-blue accent-4 btn back-home"
-          >
-            voltar
-          </a>
-        </div>
+    <div class="footer-copyright black-text">
+      <div class="container center">
+        © 2021 - Pouco a Pouco. Todos os direitos reservados
       </div>
-    </div> 
+    </div>
+  </footer>
 
-    <footer id="page-footer" class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l3 s12">
-            <h6 class="blue-text">Social</h6>
-            <div class="images">
-              <img
-                src="/public/images/social-media/twitter.svg"
-                alt="icone-do-twitter "
-              />
-              <img
-                src="/public/images/social-media/instagram.svg"
-                alt="icone-do-instagram"
-              />
-              <img
-                src="/public/images/social-media/facebook.svg"
-                alt="icone-do-facebook"
-              />
-              <img
-                src="/public/images/social-media/telegram.svg"
-                alt="icone-do-telegram"
-              />
-            </div>
-          </div>
+  <script src="/assets/resources/scripts/transaction.js"></script>
+</body>
 
-          <div class="col l2 offset-l1 s12 black-text">
-            <h6 class="blue-text">Pouca a pouco</h6>
-            <ul class="">
-              <li class="active">
-                <a class="black-text text-lighten-3" href="#">Planos</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Recursos</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Central de Ajuda
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Materiais gratuitos
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Calculadoras</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Glossário</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col l2 offset-l1 s12 black-text">
-            <h6 class="blue-text">Guias</h6>
-            <ul class="">
-              <li class="active">
-                <a class="black-text text-lighten-3" href="#"
-                  >Como economizar</a
-                >
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">Recursos</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Planejamento financeiro
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#">
-                  Finanças pessoais
-                </a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#"
-                  >Educação financeira</a
-                >
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#"
-                  >Melhores cartões de crédito</a
-                >
-              </li>
-
-              <li>
-                <a class="black-text text-lighten-3" href="#"
-                  >Planilha de controle financeiro</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col l2 offset-l1 s12 black-text">
-            <h6 class="blue-text">Empresas</h6>
-            <ul class="">
-              <li class="active">
-                <a class="black-text text-lighten-3" href="#!">Equipe</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#!">Carreiras</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#!">Imprensa</a>
-              </li>
-              <li>
-                <a class="black-text text-lighten-3" href="#!"> Contato </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright black-text">
-        <div class="container center">
-          © 2021 - Pouco a Pouco. Todos os direitos reservados
-        </div>
-      </div>
-    </footer>
-
-    <script src="/assets/resources/scripts/transaction.js"></script>
-  </body>
 </html>
