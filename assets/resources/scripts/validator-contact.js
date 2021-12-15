@@ -68,8 +68,12 @@ $(document).ready(function () {
 
   //Submit no Form
   $("form").submit(function (event) {
+    event.preventDefault();
 
-    
+    let formSubjet = $("form .subject").val();
+    let descriptionTextArea = $(".description textarea").val();
+    let selectValue = 0;
+    let selectValue2 = 0;
 
     if (email.value.trim() == "") {
       clearSpanEmail();
@@ -78,14 +82,14 @@ $(document).ready(function () {
       clearSpanEmail();
     }
 
-    if ($("form .subject").val().trim() == "") {
+    if ($.trim(formSubjet) == "") {
       clearSpanSubjet();
       createElementSpanSuject();
     } else {
       clearSpanSubjet();
     }
 
-    if ($(".description textarea").val().trim() == "") {
+    if ($.trim(descriptionTextArea) == "") {
       clearSpanDescript();
       createElementSpanDescript();
     } else {
@@ -94,15 +98,12 @@ $(document).ready(function () {
 
     $("form .select0 select")
       .change(function () {
-        let value = 0;
-
         $("select option:selected").each(function () {
-          value = $("select option:selected").val();
+          selectValue = $("select option:selected").val();
         });
 
         //console.log(value);
-
-        if (value > 0) {
+        if (selectValue > 0) {
           $("form .select0").next().show();
           clearSpandoubt();
         } else {
@@ -112,6 +113,31 @@ $(document).ready(function () {
       })
       .trigger("change");
 
-    event.preventDefault();
+    $("form .select1 select")
+      .change(function () {
+        $("select option:selected").each(function () {
+          selectValue2 = $("select option:selected").val();
+        });
+        console.log(selectValue2);
+        if (selectValue2 < 1) {
+          alert("O campo Dúvidas e solicitações não está selecionado");
+        }
+      })
+      .trigger("change");
+
+    if (
+      email.value.trim() != "" &&
+      formSubjet != "" &&
+      descriptionTextArea != "" &&
+      selectValue > 0 && selectValue2 > 0
+
+    ) {
+      alert("Solicitação enviada com sucesso!");
+      return true;
+    }
   });
+
+
+
+
 });
