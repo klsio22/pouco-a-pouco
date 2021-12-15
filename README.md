@@ -73,7 +73,7 @@
 
 ## Tratadores de Evento
 
- Especificar o tratador de evento inline
+- [x] Especificar o tratador de evento inline
 
 - [ ] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
 
